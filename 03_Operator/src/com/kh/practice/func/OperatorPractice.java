@@ -8,91 +8,90 @@ public class OperatorPractice {
 
 	public void practice01() {
 
-		System.out.print("ÀÎ¿ø ¼ö : ");
+		System.out.print("ï¿½Î¿ï¿½ ï¿½ï¿½ : ");
 		int num1 = sc.nextInt();
 
-		System.out.print("»çÅÁ °³¼ö : ");
+		System.out.print("ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ : ");
 		int num2 = sc.nextInt();
 
 		System.out.println("\n");
-		
-		System.out.println("1ÀÎ´ç »çÅÁ °³¼ö : " + num2 / num1);
-		System.out.println("³²´Â »çÅÁ °³¼ö : " + num2 % num1);
+
+		System.out.println("1ï¿½Î´ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ : " + num2 / num1);
+		System.out.println("ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ : " + num2 % num1);
 
 	}
 
 	public void practice02() {
 
-		System.out.print("ÀÌ¸§ : ");
+		System.out.print("ï¿½Ì¸ï¿½ : ");
 		String name = sc.nextLine();
 
-		System.out.print("ÇÐ³â(¼ýÀÚ¸¸) : ");
+		System.out.print("ï¿½Ð³ï¿½(ï¿½ï¿½ï¿½Ú¸ï¿½) : ");
 		int year = sc.nextInt();
 
-		System.out.print("¹Ý(¼ýÀÚ¸¸) : ");
+		System.out.print("ï¿½ï¿½(ï¿½ï¿½ï¿½Ú¸ï¿½) : ");
 		int group = sc.nextInt();
 
-		System.out.print("¹øÈ£(¼ýÀÚ¸¸) : ");
+		System.out.print("ï¿½ï¿½È£(ï¿½ï¿½ï¿½Ú¸ï¿½) : ");
 		int num = sc.nextInt();
 
-		System.out.print("¼ºº°(M/F) : ");
+		System.out.print("ï¿½ï¿½ï¿½ï¿½(M/F) : ");
 		char gender = sc.next().charAt(0);
 
-		System.out.print("¼ºÀû(¼Ò¼öÁ¡ ¾Æ·¡ µÑÂ°ÀÚ¸® ±îÁö) : ");
+		System.out.print("ï¿½ï¿½ï¿½ï¿½(ï¿½Ò¼ï¿½ï¿½ï¿½ ï¿½Æ·ï¿½ ï¿½ï¿½Â°ï¿½Ú¸ï¿½ ï¿½ï¿½ï¿½ï¿½) : ");
 		double grade = sc.nextDouble();
 
-		System.out.println(year + "ÇÐ³â " + group + "¹Ý " + num + "¹ø "+ name + " " + (gender == 'M' || gender == 'm' ? "³²" : "¿©")
-				+ "ÇÐ»ýÀÇ ¼ºÀûÀº " + grade + "ÀÌ´Ù.");
+		System.out.println(year + "ï¿½Ð³ï¿½ " + group + "ï¿½ï¿½ " + num + "ï¿½ï¿½ " + name + " "
+				+ (gender == 'M' || gender == 'm' ? "ï¿½ï¿½" : "ï¿½ï¿½") + "ï¿½Ð»ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ " + grade + "ï¿½Ì´ï¿½.");
 
 	}
 
 	public void practice03() {
 
-		System.out.print("³ªÀÌ : ");
+		System.out.print("ï¿½ï¿½ï¿½ï¿½ : ");
 		int num = sc.nextInt();
 
-		System.out.print(num <= 13 ? "¾î¸°ÀÌ" : 
-						(num <= 19 ? "Ã»¼Ò³â" : "¼ºÀÎ"));
+		System.out.print(num <= 13 ? "ï¿½î¸°ï¿½ï¿½" : (num <= 19 ? "Ã»ï¿½Ò³ï¿½" : "ï¿½ï¿½ï¿½ï¿½"));
 
 	}
 
 	public void practice04() {
 
-		System.out.print("±¹¾î : ");
+		System.out.print("ï¿½ï¿½ï¿½ï¿½ : ");
 		int kor = sc.nextInt();
 
-		System.out.print("¿µ¾î : ");
+		System.out.print("ï¿½ï¿½ï¿½ï¿½ : ");
 		int eng = sc.nextInt();
 
-		System.out.print("¼öÇÐ : ");
+		System.out.print("ï¿½ï¿½ï¿½ï¿½ : ");
 		int mat = sc.nextInt();
 
 		int sum = kor + eng + mat;
 		double avg = sum / 3.0;
 
-		System.out.println("ÇÕ°è : " + sum);
-		System.out.println("Æò±Õ : " + avg);
-		System.out.println(kor >= 40 && eng >= 40 && mat >= 40 && avg >= 60 ? "ÇÕ°Ý" : "ºÒÇÕ°Ý");
+		System.out.println("ï¿½Õ°ï¿½ : " + sum);
+		System.out.println("ï¿½ï¿½ï¿½ : " + avg);
+		System.out.println(kor >= 40 && eng >= 40 && mat >= 40 && avg >= 60 ? "ï¿½Õ°ï¿½" : "ï¿½ï¿½ï¿½Õ°ï¿½");
 
 	}
 
 	public void practice05() {
 
-		System.out.print("ÁÖ¹Î¹øÈ£¸¦ ÀÔ·ÂÇÏ¼¼¿ä(- Æ÷ÇÔ) : ");
+		System.out.print("ï¿½Ö¹Î¹ï¿½È£ï¿½ï¿½ ï¿½Ô·ï¿½ï¿½Ï¼ï¿½ï¿½ï¿½(- ï¿½ï¿½ï¿½ï¿½) : ");
 		char ch = sc.nextLine().charAt(7);
 
-		System.out.println(ch == '3' || ch == '1' ? "³²ÀÚ" : "¿©ÀÚ");
+		System.out.println(ch == '3' || ch == '1' ? "ï¿½ï¿½ï¿½ï¿½" : "ï¿½ï¿½ï¿½ï¿½");
 	}
 
 	public void practice06() {
 
-		System.out.print("Á¤¼ö1 : ");
+		System.out.print("ì •ìˆ˜ 1 : ");
 		int num1 = sc.nextInt();
 
-		System.out.print("Á¤¼ö2 : ");
+		System.out.print("ì •ìˆ˜ 2 : ");
 		int num2 = sc.nextInt();
 
-		System.out.print("ÀÔ·Â : ");
+		System.out.print("ìž…ë ¥ : ");
 		int num3 = sc.nextInt();
 
 		boolean result = num3 <= num1 || num3 > num2;
@@ -101,13 +100,13 @@ public class OperatorPractice {
 
 	public void practice07() {
 
-		System.out.print("ÀÔ·Â1 : ");
+		System.out.print("ï¿½Ô·ï¿½1 : ");
 		int num1 = sc.nextInt();
 
-		System.out.print("ÀÔ·Â2 : ");
+		System.out.print("ï¿½Ô·ï¿½2 : ");
 		int num2 = sc.nextInt();
 
-		System.out.print("ÀÔ·Â3 : ");
+		System.out.print("ï¿½Ô·ï¿½3 : ");
 		int num3 = sc.nextInt();
 
 		boolean result = num1 == num2 && num2 == num3;
@@ -117,13 +116,13 @@ public class OperatorPractice {
 
 	public void practice08() {
 
-		System.out.print("A»ç¿øÀÇ ¿¬ºÀ : ");
+		System.out.print("Aï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ : ");
 		int A = sc.nextInt();
 
-		System.out.print("B»ç¿øÀÇ ¿¬ºÀ : ");
+		System.out.print("Bï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ : ");
 		int B = sc.nextInt();
 
-		System.out.print("C»ç¿øÀÇ ¿¬ºÀ : ");
+		System.out.print("Cï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ : ");
 		int C = sc.nextInt();
 
 		double a = 0.4;
@@ -134,16 +133,13 @@ public class OperatorPractice {
 		double mb = (B * b) + B;
 		double mc = (C * c);
 
-		System.out.println("A»ç¿ø ¿¬ºÀ/¿¬ºÀ+a : " + A + "/" + ma);
-		System.out.println(ma >= 3000 ? "3000 ÀÌ»ó" : "3000 ¹Ì¸¸");
+		System.out.println("Aï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½/ï¿½ï¿½ï¿½ï¿½+a : " + A + "/" + ma + "\n" + (ma >= 3000 ? "3000 ï¿½Ì»ï¿½" : "3000 ï¿½Ì¸ï¿½"));
 
-		System.out.println("B»ç¿ø ¿¬ºÀ/¿¬ºÀ+a : " + B + "/" + mb);
-		System.out.println(mb >= 3000 ? "3000 ÀÌ»ó" : "3000 ¹Ì¸¸");
+		System.out.println("Bï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½/ï¿½ï¿½ï¿½ï¿½+a : " + B + "/" + mb + "\n" + (mb >= 3000 ? "3000 ï¿½Ì»ï¿½" : "3000 ï¿½Ì¸ï¿½"));
 
-		System.out.println("C»ç¿ø ¿¬ºÀ/¿¬ºÀ+a : " + C + "/" + mc);
-		System.out.println(mc >= 3000 ? "3000 ÀÌ»ó" : "3000 ¹Ì¸¸");
+		System.out.println("Cï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½/ï¿½ï¿½ï¿½ï¿½+a : " + C + "/" + mc + "\n" + (mc >= 3000 ? "3000 ï¿½Ì»ï¿½" : "3000 ï¿½Ì¸ï¿½"));
 
-		//C»ç¿ø¸¸ ¼ýÀÚ³ª °è»ê ±â´ÉÀÌ ´Ù¸¥ ÀÌÀ¯´Â ¿¹½Ã ¹®Á¦¿Í Á¤È®ÇÏ°Ô ÇÏ·Á°í ¹Ù²Û°ÍÀÌ´Ï Á¦´ë·Î ÀÛµ¿ÇÏ·Á¸é A¿Í BÃ³·³ Á¶Á¤ ÇØ¾ßÇÑ´Ù.
+		// Cï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ú³ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ù¸ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È®ï¿½Ï°ï¿½ ï¿½Ï·ï¿½ï¿½ï¿½ ï¿½Ù²Û°ï¿½ï¿½Ì´ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ûµï¿½ï¿½Ï·ï¿½ï¿½ï¿½ Aï¿½ï¿½ BÃ³ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ø¾ï¿½ï¿½Ñ´ï¿½.
 	}
 
 	public void why() {
@@ -155,7 +151,9 @@ public class OperatorPractice {
 
 		double mc = (C * c);
 
-		System.out.println(mc + " / 2989.9999999999995 ÀÌ ³ª¿Í¾ß ÇÑ´Ù");
+		System.out.println(mc + " / 2989.9999999999995 ï¿½ï¿½ ï¿½ï¿½ï¿½Í¾ï¿½ ï¿½Ñ´ï¿½");
 
 	}
+	
+	
 }

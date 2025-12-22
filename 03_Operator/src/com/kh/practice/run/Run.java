@@ -8,7 +8,7 @@ public class Run {
 		
 		OperatorPractice op = new OperatorPractice();
 		
-		
+		// 1부터 8까지 돌아가면서 실행해보면 된다
 		op.practice03();
 	}
 }
