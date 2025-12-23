@@ -6,6 +6,6 @@ public class Run {
 		
 		ControlPractice cp = new ControlPractice();
 		
-		cp.practice11();
+		cp.practice1();
 	}
 }

@@ -52,8 +52,9 @@ public class ControlPractice {
 
 		} else if (num % 2 == 1) {
 			System.out.println("홀수다");
-			
-			}}
+
+		}
+	}
 
 	public void practice3() {
 		System.out.print("국어점수 : ");
@@ -82,44 +83,20 @@ public class ControlPractice {
 
 		switch (we) {
 
-		case 1:
-			System.out.println("봄 입니다");
-			break;
-		case 2:
-			System.out.println("봄 입니다");
-			break;
-		case 3:
+		case 1, 2, 3:
 			System.out.println("봄 입니다");
 			break;
 
-		case 4:
-			System.out.println("여름 입니다");
-			break;
-		case 5:
-			System.out.println("여름 입니다");
-			break;
-		case 6:
+		case 4, 5, 6:
 			System.out.println("여름 입니다");
 			break;
 
-		case 7:
-			System.out.println("가을 입니다");
-			break;
-		case 8:
-			System.out.println("가을 입니다");
-			break;
-		case 9:
+		case 7, 8, 9:
 			System.out.println("가을 입니다");
 			break;
 
-		case 10:
+		case 10, 11, 12:
 			System.out.println("겨울 입니다");
-			break;
-		case 11:
-			System.out.println("가을 입니다");
-			break;
-		case 12:
-			System.out.println("가을 입니다");
 			break;
 
 		default:
@@ -154,15 +131,12 @@ public class ControlPractice {
 	}
 
 	public void practice6() {
-		String str = "관리자";
-		String str1 = "회원";
-		String str2 = "비회원";
 
 		System.out.print("권한을 확인하고자 하는 회원 등급 : ");
 		String r = sc.next();
 
 		switch (r) {
-
+		// break 없이 프린트문이 쌓이는 형태로 만들어라
 		case "관리자":
 			System.out.println("회원관리, 게시글 관리, 게시글 작성, 게시글 조회, 댓글 작성");
 			break;
@@ -195,17 +169,18 @@ public class ControlPractice {
 		if (bmi < 18.5) {
 			System.out.println("저체중");
 
-		} else if (bmi >= 18.5 && bmi < 23) {
+		} else if (bmi < 23) {
 			System.out.println("정상체중");
 
-		} else if (bmi >= 23 && bmi < 25) {
+		} else if (bmi < 25) {
 			System.out.println("과체중");
 
-		} else if (bmi >= 25 && bmi < 30) {
+		} else if (bmi < 30) {
 			System.out.println("비만");
 
 		} else if (bmi >= 30) {
 			System.out.println("고도 비만");
+
 		} else {
 			System.out.println("다시한번 입력해주세요");
 
@@ -217,8 +192,10 @@ public class ControlPractice {
 
 		System.out.println("피연산자1 입력 : ");
 		int p1 = sc.nextInt();
+
 		System.out.println("피연산자2 입력 : ");
 		int p2 = sc.nextInt();
+
 		System.out.println("연산자를 입력 : ");
 		char yon = sc.next().charAt(0);
 
@@ -241,7 +218,7 @@ public class ControlPractice {
 				System.out.println(p1 + " / " + p2 + " = " + (p1 / p2));
 				break;
 			case '%':
-				System.out.println(p1 + " % " + p2 + " = " + (p1 % p2));
+				System.out.println(p1 + " % " + p2 + " = " + (p1 % (double) p2));
 				break;
 			default:
 				System.out.println("잘못입력하셨습니다 프로그램을 종료합니다.");
@@ -253,32 +230,35 @@ public class ControlPractice {
 	public void practice9() {
 
 		System.out.print("중간 고사 점수 : ");
-		int j = sc.nextInt();
+		int midTest = sc.nextInt();
 
 		System.out.print("기말 고사 점수 : ");
-		int g = sc.nextInt();
+		int finalTest = sc.nextInt();
 
 		System.out.print("과제 점수 : ");
-		int gwa = sc.nextInt();
+		int gwaJe = sc.nextInt();
 
 		System.out.print("출석 회수 : ");
-		int ch = sc.nextInt();
+		int chol = sc.nextInt();
 
-		int gang = 20;
+		int gangE = 20;
 
-		double J = j * 0.2;
-		double G = g * 0.3;
-		double GWA = gwa * 0.3;
+		double scoreMid = midTest * 0.2;
+		double scoreFinal = finalTest * 0.3;
+		double scoreGwaJe = gwaJe * 0.3;
 
-		double HA = J + G + GWA;
+		double total = scoreMid + scoreFinal + scoreGwaJe;
 
-		if (HA >= 70 && ch >= (gang * 0.3)) {
+		if (total >= 70 && chol > (gangE * 0.7)) {
 
 			System.out.println("pass");
-		} else if (HA < 70 || ch < (gang * 0.3)) {
+
+		} else if (total < 70 || chol <= (gangE * 0.7)) {
 
 			System.out.println("fail");
+
 		} else {
+
 			System.out.println("다시 입력해 주세요");
 		}
 
@@ -286,39 +266,55 @@ public class ControlPractice {
 
 	public void practice10() {
 
-		System.out.print(" 실행할 기능을 선택하세요.\n 1. 메뉴 출력\n 2. 짝수/홀수\n 3. 합격/불합격\n 4.계절\n 5.로그인 \n 6. 권한 확인\n 7. BMI\n 9. 계산기");
+		System.out.print(
+				" 실행할 기능을 선택하세요.\n 1. 메뉴 출력\n 2. 짝수/홀수\n 3. 합격/불합격\n 4.계절\n 5.로그인 \n 6. 권한 확인\n 7. BMI\n 9. 계산기");
 		int we = sc.nextInt();
 
 		switch (we) {
 
 		case 1:
 			System.out.print("선택 : " + we + "(실습문제" + we + " 실행)");
+			practice1();
 			break;
+
 		case 2:
 			System.out.print("선택 : " + we + "(실습문제" + we + " 실행)");
+			practice2();
 			break;
+
 		case 3:
 			System.out.print("선택 : " + we + "(실습문제" + we + " 실행)");
+			practice3();
 			break;
 
 		case 4:
 			System.out.print("선택 : " + we + "(실습문제" + we + " 실행)");
+			practice4();
 			break;
+
 		case 5:
 			System.out.print("선택 : " + we + "(실습문제" + we + " 실행)");
+			practice5();
 			break;
+
 		case 6:
 			System.out.print("선택 : " + we + "(실습문제" + we + " 실행)");
+			practice6();
 			break;
 
 		case 7:
 			System.out.print("선택 : " + we + "(실습문제" + we + " 실행)");
+			practice7();
 			break;
+
 		case 8:
 			System.out.print("선택 : " + we + "(실습문제" + we + " 실행)");
+			practice8();
 			break;
+
 		case 9:
 			System.out.print("선택 : " + we + "(실습문제" + we + " 실행)");
+			practice9();
 			break;
 
 		default:
@@ -333,24 +329,28 @@ public class ControlPractice {
 
 		System.out.print("비밀번호 생성 : ");
 		int psw = sc.nextInt();
-
+			// 3자리수면 오류가 나니 자릿수 검사 후에 집어넣도록 설정
 		String e = Integer.toString(psw);
 		char a = e.charAt(0);
 		char b = e.charAt(1);
 		char c = e.charAt(2);
 		char d = e.charAt(3);
 
-		if (e.length()<4 || e.length()>4) {
+		if (e.length() < 4 || e.length() > 4) {
 
 			System.out.println("자리수 안맞음");
+			
 		} else if (a == b || b == c || c == d) {
 
 			System.out.println("중복값 있음");
+			
 		} else if (psw >= 1000 && psw <= 9999) {
 
 			System.out.println("비밀번호 생성 완료");
 			set = psw;
+			
 		} else {
+			
 			System.out.println("다시 입력해 주세요.");
 		}
 
@@ -363,10 +363,16 @@ public class ControlPractice {
 		} else if (ttry == set) {
 
 			System.out.println("성공");
+			
 		} else {
+			
 			System.out.println("다시한번 해주세요");
+			
 		}
 
 	}
+	
+	
+	
 
 }
