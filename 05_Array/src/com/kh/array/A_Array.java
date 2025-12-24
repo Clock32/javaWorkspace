@@ -1,5 +1,7 @@
 package com.kh.array;
 
+import java.util.Arrays;
+
 public class A_Array {
 	/*
 	 * 변수 : 하나의 공간에 하나의 값을 저장할 수 있는 저장공간.
@@ -67,5 +69,103 @@ public class A_Array {
 		//iArr2 : 1131316523
 		//iArr3 : 1131316523
 		
+		System.out.println(iArr == iArr2); //false
+		System.out.println(iArr2 == iArr3); // true
+		
+		
 	}
+	
+	public void method3() {
+		int iArr[] = new int [5];
+		
+		/*
+		 * 배열값 초기화
+		 */
+			for(int i=0;i<iArr.length;i++) {
+				iArr[i] = i;	
+				System.out.print(iArr[i]+" ");
+			}
+			
+		
+	}
+	public void method4() {
+		
+		int result = 0;
+		String str = null; //"";
+		int arr[] = null;
+		
+		//null은 모든 참조 자료형의 기본값이다 . 참조변수가 null을 저장한 상태에서 주소값이 있어ㅑ야 수행할수있는 행위를 코드르ㅗ 작성하면 싱행시 오류가 발생한다.
+		System.out.println(arr.length);
+		System.out.println(arr[0]);
+		
+	}
+	public void method5() {
+		int arr[] = new int [5];
+		
+		/*
+		 * arr 0번 엔 2ㅣ
+		 * 1번엔 4
+		 * 2번엔 6 이런식
+		 */
+		
+		for (int i = 0 ; i < arr.length;i++) 
+		{		
+				arr[i] = 2*(i+1);
+				//System.out.print(arr[i]+" ");
+		}
+		
+		for(int i = arr.length-1 ; i>-1;i--) {
+			System.out.print(arr[i]+" ");
+		}
+		
+		//arr[5] = 12;
+		/*
+		 * 배열은 크기를 벗어난 인덱스 제시시 에러가 방생하고
+		 * 배열은 한번 지정한 크기를 변경할 수 없다
+		 * 배열의 범위를 넘어서 ㄴ값들을 저장하고싶다면 새로운 배열을 생성해야한다
+		 */
+		arr = new int[6];
+		arr[5] = 12;
+		
+		/*
+		 * 이런식으로 배열의 크기를 늘릴려고 한다면 기존의 모든 배열의 값은 0으로 돌아간다
+		 */
+	}
+	
+	public void method6() {
+		/*
+		 * 배열의 선언, 할당, 초기화를 한번에 선언하는 ㄱ방법
+		 */
+		int arr1[] = new int[] {1,2,3,4};
+		
+		int arr2[] = {1,2,3,4};
+		
+		
+		
+	}
+	public void method7() {
+		/*
+		 * 문자열을 문자배열로 만드는 방법
+		 */
+		//to char Array 사용
+		String str = "Merry";
+		char arr1[] = str.toCharArray();
+		
+		//문자배열 생성하ㅁ여 옮겨닮기
+		
+		char arr2[] = new char[str.length()];
+		
+		for (int i = 0; i<arr2.length;i++) {
+			arr2[i] = str.charAt(i);	
+		}
+		
+		System.out.println(Arrays.toString(arr1));
+		System.out.print(Arrays.toString(arr2));
+		//배열 내부의 값들을 문자열로 반환하여 내보내는 메소드
+		//Arrays.toString()
+	}
+	
+	
+	
+	
 }
