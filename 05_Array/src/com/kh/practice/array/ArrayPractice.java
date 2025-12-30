@@ -149,7 +149,7 @@ public class ArrayPractice {
 
 		int count = 0;
 
-		char strc[] = str.toCharArray();
+		char strc[] = str.toCharArray(); // 문자열을 문자 메서드로 반환한다
 
 		System.out.print(str + "에 " + i + "가 존재하는 위치(인덱스) : ");
 		for (int j = 0; j < strc.length; j++) {
@@ -174,62 +174,108 @@ public class ArrayPractice {
 		char cc[] = { '*', '*', '*', '*', '*', '*', '-', '*', '*', '*', '*', '*', '*', '*' };
 		System.arraycopy(oc, 0, cc, 0, 8);
 
+		// char cc[] = Arrays.copyOf(oc,oc.length); 이런식으로 하는것이 더 간단할 수도 있다.
+
 		System.out.println(cc);
 
 	}
 
-	public void practice9() { // --------------------------------------------------------
+	public void practice9() {
+		/*
+		 * // --------------------------------------------------------
+		 * 
+		 * int arr[] = { (int) ((Math.random() * 10) + 1), (int) ((Math.random() * 10) +
+		 * 1), (int) ((Math.random() * 10) + 1), (int) ((Math.random() * 10) + 1), (int)
+		 * ((Math.random() * 10) + 1), (int) ((Math.random() * 10) + 1), (int)
+		 * ((Math.random() * 10) + 1), (int) ((Math.random() * 10) + 1), (int)
+		 * ((Math.random() * 10) + 1), (int) ((Math.random() * 10) + 1) };
+		 * 
+		 * System.out.println(Arrays.toString(arr));
+		 * 
+		 * int min = 10;
+		 * 
+		 * for (int i = 0; i < arr.length; i++) {
+		 * 
+		 * for (int j = 0; j < arr.length; j++) {
+		 * 
+		 * if (arr[i] < arr[j] && arr[i] < min) {
+		 * 
+		 * min = i;
+		 * 
+		 * }
+		 * 
+		 * }
+		 * 
+		 * }
+		 * 
+		 * System.out.println(min);
+		 * 
+		 */
 
-		int arr[] = { (int) ((Math.random() * 10) + 1), (int) ((Math.random() * 10) + 1),
-				(int) ((Math.random() * 10) + 1), (int) ((Math.random() * 10) + 1), (int) ((Math.random() * 10) + 1),
-				(int) ((Math.random() * 10) + 1), (int) ((Math.random() * 10) + 1), (int) ((Math.random() * 10) + 1),
-				(int) ((Math.random() * 10) + 1), (int) ((Math.random() * 10) + 1) };
-
-		System.out.println(Arrays.toString(arr));
-
-		int min = 10;
+		int arr[] = new int[10];
 
 		for (int i = 0; i < arr.length; i++) {
 
-			for (int j = 0; j < arr.length; j++) {
-
-				if (arr[i] < arr[j] && arr[i] < min) {
-
-					min = i;
-
-				}
-
-			}
-
+			arr[i] = (int) (Math.random() * 10 + 1);
 		}
 
-		System.out.println(min);
+		for (int i = 0; i < arr.length; i++) {
+
+			System.out.println(arr[i] + " ");
+		}
+
+		int max = arr[0];
+		int min = arr[0];
+
+		for (int i = 1; i < arr.length; i++) {
+
+			if (arr[i] > max) {
+
+				max = arr[i];
+			}
+			if (arr[i] < min) {
+
+				min = arr[i];
+			}
+		}
 
 	}
 
 	public void practice10() { // -------------------------------------------------
+		/*
+		 * int arr[] = { (int) ((Math.random() * 10) + 1), (int) ((Math.random() * 10) +
+		 * 1), (int) ((Math.random() * 10) + 1), (int) ((Math.random() * 10) + 1), (int)
+		 * ((Math.random() * 10) + 1), (int) ((Math.random() * 10) + 1), (int)
+		 * ((Math.random() * 10) + 1), (int) ((Math.random() * 10) + 1), (int)
+		 * ((Math.random() * 10) + 1), (int) ((Math.random() * 10) + 1) };
+		 * 
+		 * //반복문으로 조금 더 깔끔하게 다듬을 수 있다. /* for ( 애초에 값을 넣을때부터 앞에있는 값들에 대한 중복검사를 실행함으로
+		 * 중복이라면 재삽입 할 수 있도록 구현할 수 있다 그렇게 해야하고
+		 *
+		 * 
+		 * 
+		 * int cc[] = new int[arr.length];
+		 * 
+		 * for (int i = 0; i < arr.length; i++) {
+		 * 
+		 * for (int j = 1; j < arr.length; j++) {
+		 * 
+		 * if (arr[i] == arr[j]) {
+		 * 
+		 * cc[i] = j;
+		 * 
+		 * } }
+		 * 
+		 * } System.out.println(Arrays.toString(arr));
+		 * System.out.println(Arrays.toString(cc));
+		 */
 
-		int arr[] = { (int) ((Math.random() * 10) + 1), (int) ((Math.random() * 10) + 1),
-				(int) ((Math.random() * 10) + 1), (int) ((Math.random() * 10) + 1), (int) ((Math.random() * 10) + 1),
-				(int) ((Math.random() * 10) + 1), (int) ((Math.random() * 10) + 1), (int) ((Math.random() * 10) + 1),
-				(int) ((Math.random() * 10) + 1), (int) ((Math.random() * 10) + 1) };
-
-		int cc[] = new int[arr.length];
+		int arr[] = new int[10];
 
 		for (int i = 0; i < arr.length; i++) {
 
-			for (int j = 1; j < arr.length; j++) {
-
-				if (arr[i] == arr[j]) {
-
-					cc[i] = j;
-
-				}
-			}
-
+			arr[i] = (int) ((Math.random() * 10) + 1);
 		}
-		System.out.println(Arrays.toString(arr));
-		System.out.println(Arrays.toString(cc));
 
 	}
 
@@ -258,24 +304,23 @@ public class ArrayPractice {
 			} else {
 				System.out.println("다시 입력하세요");
 				continue;
-			}
+			} //반복문의 i 와 같은것들은 인덱스의 접근하기위한 것을모만써라 
 		}
 
 	}
 
-	public void practice12() 
-	{
+	public void practice12() { //배열 추가입력을 반복문으로 while 같은걸 사용하여 무한반복하게끔 수정해야한다 지금은 한번 추가입ㄺ이 끝나면 자동종료라서 조금 더 손을 봐야할것각ㅌ아
 
+		
+		// 처음부터 무한반복문을 사용하지말고 더 값을 입력받으시겠습니까? 부터 무한 반복문을 실행하면 원하던 기능이 구현될 수 도 있다
 		System.out.print("배열의 크기를 입력하세요 : ");
 		int num = sc.nextInt();
 		String arr[] = new String[num];
 
-		while (true) 
-		{
+		while (true) {
 
-			for (int i = 0; i <= num - 1; i++) 
-			{
-
+			for (int i = 0; i <= num - 1; i++) {
+				
 				System.out.print(i + "번째 문자열 : ");
 				String a = sc.next();
 				arr[i] = a;
@@ -285,35 +330,31 @@ public class ArrayPractice {
 			System.out.print("더 값을 입력하시겠습니다? (y/n) : ");
 			char yn = sc.next().charAt(0);
 
-			if (yn == 'y') 
-			{
-
+			if (yn == 'y' || yn == 'Y') {
+ 
 				System.out.println("더 입력하고 싶은 개수 : ");
 				int nNum = sc.nextInt();
 
 				String arr2[] = Arrays.copyOf(arr, (num + nNum));
 
-				for (int i = num; i <= (num + nNum) - 1; i++) 
-					
-				{
+				for (int i = num; i <= (num + nNum) - 1; i++)
 
+				{
 					System.out.print(i + "번째 문자열 : ");
 					String a = sc.next();
 					arr2[i] = a;
-
 				}
-				
+				//원본 배열을 copy한 배열로 얉은 복사를 진행하여 무한반복이 가능하게끔 구현한다
+
 				System.out.println(Arrays.toString(arr2));
 				return;
 
-			} else 
-				
-				{
-				
+			} else
+
+			{
 				System.out.println(Arrays.toString(arr));
 				return;
-				
-				}
+			}
 
 		}
 	}
