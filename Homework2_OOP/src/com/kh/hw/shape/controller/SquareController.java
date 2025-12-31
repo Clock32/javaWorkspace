@@ -4,7 +4,7 @@ import com.kh.hw.shape.model.vo.Shape;
 
 public class SquareController {
 
-	Shape s = new Shape();
+	private Shape s = new Shape();
 	
 	
 	public double calcPerimeter(double height,double width) {

@@ -10,6 +10,7 @@ public class TriangleController {
 	public double calcArea(double height,double width) {
 		s.setWidth(width);
 		s.setHeight(height);
+		// 위의 셋을 개별적으로 하기보단 shape 에 있는 shape 를 사용하여 한번에 세팅하는것이 보는것도 실행면에서도 훌륭하다
 		
 		double result = ((s.getHeight())*(s.getWidth())/2);
 		

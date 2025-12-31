@@ -14,7 +14,7 @@ public class ShapeMenu {
 	TriangleController tc = new TriangleController();
 	
 	public void inputMenu() {
-		int typeNum;
+		
 
 		System.out.println("===== 도형 프로그램 =====");
 		System.out.println("3. 삼각형");
@@ -28,12 +28,12 @@ public class ShapeMenu {
 
 		case 3:
 			triangleMenu();
-			typeNum = 3;
-			return;
+			
+			return; //break; 도 사용 가능하다
 
 		case 4:
 			squareMenu();
-			typeNum = 4;
+			
 			return;
 		
 		case 9:
@@ -138,9 +138,9 @@ public class ShapeMenu {
 			switch (menuNum) {
 			case 1:
 				System.out.print("높이 : ");
-				int height = sc.nextInt();
+				double height = sc.nextInt();
 				System.out.print("면적 : ");
-				int weight = sc.nextInt();
+				double weight = sc.nextInt();
 
 				System.out.println("삼각형 면적 : " + tc.calcArea(height, weight));
 				
@@ -152,7 +152,7 @@ public class ShapeMenu {
 				triangleMenu();
 				
 			case 3 :
-				printInformation(1);
+				printInformation(3);
 				
 				
 
@@ -163,9 +163,9 @@ public class ShapeMenu {
 			
 			case 1:
 				System.out.print("높이 : ");
-				int height = sc.nextInt();
+				double height = sc.nextInt();
 				System.out.print("면적 : ");
-				int weight = sc.nextInt();
+				double weight = sc.nextInt();
 
 				System.out.println("사각형 둘레 : " + scr.calcArea(height, weight));
 				
@@ -173,9 +173,9 @@ public class ShapeMenu {
 				
 			case 2:
 				System.out.print("높이 : ");
-				int height2 = sc.nextInt();
+				double height2 = sc.nextInt();
 				System.out.print("면적 : ");
-				int weight2 = sc.nextInt();
+				double weight2 = sc.nextInt();
 
 				System.out.println("사각형 면적 : " + scr.calcArea(height2, weight2));
 				
@@ -188,7 +188,7 @@ public class ShapeMenu {
 				squareMenu();
 				
 			case 4 :
-				printInformation(2);
+				printInformation(4);
 				
 			
 			
@@ -202,10 +202,10 @@ public class ShapeMenu {
 	public void printInformation(int type) {
 		
 		switch (type) {
-		case 1 :  System.out.println(tc.print());
+		case 3 :  System.out.println(tc.print());
 					triangleMenu();
 		
-		case 2 :  System.out.println(scr.print());
+		case 4 :  System.out.println(scr.print());
 					squareMenu();
 		}
 
