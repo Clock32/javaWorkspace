@@ -9,9 +9,11 @@ public class EmployeeMenu {
 	EmployeeController ec = new EmployeeController();
 	
 	
-	
-	
 	public EmployeeMenu() {
+		
+	}
+	
+	public void EmployeeMenu() {
 		
 		System.out.println("1.사원 추가");
 		
@@ -45,7 +47,7 @@ public class EmployeeMenu {
 					
 				
 			default : System.out.println("잘못 입력하셨습니다.");
-						return;
+			EmployeeMenu();
 						
 		}
 		
@@ -82,13 +84,13 @@ public class EmployeeMenu {
 			double eBon = sc.nextDouble();
 			
 			ec.add(eNum, eName, eGen, ePnum, eDep, eSal, eBon);
-			return;
+			EmployeeMenu();
 			
 		}else {
 			
 			
 			ec.add(eNum, eName, eGen, ePnum);
-			return;
+			EmployeeMenu();
 			
 		}
 		
@@ -133,10 +135,10 @@ public class EmployeeMenu {
 					
 					
 		case 9 :	System.out.println("메인메뉴로 돌아갑니다.");
-					break;
+		EmployeeMenu();
 			
 			default : System.out.println("잘못 입력하셨습니다.");
-					break;	
+			EmployeeMenu();	
 		
 		
 		
@@ -155,12 +157,12 @@ public class EmployeeMenu {
 			
 			ec.remove();
 			System.out.println("데이터 삭제에 성공하였습니다.");
-			return;
+			EmployeeMenu();
 			
 		}else {
 			
 			System.out.println("데이터 삭제에 실패하였습니다.");
-			return;
+			EmployeeMenu();
 			
 		}
 		
@@ -168,8 +170,8 @@ public class EmployeeMenu {
 	
 	public void printEmp() {
 		
-		ec.inform();
-		return;
+		System.out.println(ec.inform());
+		EmployeeMenu();
 		
 	}
 	
