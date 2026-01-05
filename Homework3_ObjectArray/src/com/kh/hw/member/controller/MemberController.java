@@ -12,7 +12,15 @@ public class MemberController {
 	
 	public int existMemberNum() {
 		
-		return 1;
+		int count = 0;
+		
+		for (Member mem : m) {
+			if(mem != null) {	
+				count++;
+			}	
+		}
+		
+		return count;
 	}
 	
 	public Boolean checkId(String inputId) {
@@ -21,7 +29,7 @@ public class MemberController {
 	} 
 	
 	public void insertMember(String id,String name,
-	String password, String email,String gender,int age) {
+	String password, String email,char gender,int age) {
 		
 		
 	}

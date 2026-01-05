@@ -57,10 +57,10 @@ public class EmployeeController {
 		String info = null;
 		
 		if(e == null) {
-			info = "null값 입니다.";
+			info = "데이터가 없습니다.";
 		}else
 			info = (e.getName()+" "+e.getGender()+" "+e.getEmpNo()+" "+e.getDept()+" "+e.getSalary()+" "+e.getBonus());
-		
+	
 		
 		return info;
 		
