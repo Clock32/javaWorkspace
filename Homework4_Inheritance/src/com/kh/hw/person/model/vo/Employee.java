@@ -13,6 +13,8 @@ public class Employee extends Person {
 	
 	public Employee(String name,int age,double height,double weight, int salary,String dept){
 		
+		super(name,age,height,weight);
+		
 		this.salary = salary;
 		this.dept = dept;
 		

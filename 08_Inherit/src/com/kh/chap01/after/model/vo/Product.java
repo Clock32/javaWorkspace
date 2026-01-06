@@ -24,7 +24,6 @@ public class Product {
 		this.pCode = pCode;
 		this.pName = pName;
 		this.price = price;
-		
 	}
 	
 	
@@ -33,24 +32,31 @@ public class Product {
 	public String getBrand() {
 		return brand;
 	}
+	
 	public void setBrand(String brand) {
 		this.brand = brand;
 	}
+	
 	public String getpCode() {
 		return pCode;
 	}
+	
 	public void setpCode(String pCode) {
 		this.pCode = pCode;
 	}
+	
 	public String getpName() {
 		return pName;
 	}
+	
 	public void setpName(String pName) {
 		this.pName = pName;
 	}
+	
 	public int getPrice() {
 		return price;
 	}
+	
 	public void setPrice(int price) {
 		this.price = price;
 	}
@@ -60,8 +66,7 @@ public class Product {
 	
 	// 중복된 information 메서드
 	public String information() {
-		
-		
+			
 		return brand+", "+pCode+", "+pName+", "+price;
 	}
 	

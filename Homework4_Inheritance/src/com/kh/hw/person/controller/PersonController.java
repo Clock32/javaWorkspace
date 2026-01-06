@@ -10,26 +10,54 @@ public class PersonController {
 	private Employee[] e = new Employee[10];
 	
 	
-	public int personCount() {
+	
+	public int[] personCount() {
 		
-		return  0;
+		int arr[] = new int [2];
+		
+		
+		//학생의 숫자 
+		int count = 0;
+		
+		for(Student srr : s) {
+			
+			if(srr != null) {
+				count++;
+			}
+		}
+		
+		arr[0] = count;
+		
+		count = 0;
+		
+		
+		for (Employee err : e) {
+			if(err != null) {
+				
+				count++;
+			}
+			
+		}
+		arr[1] = count;
+		
+		
+		return  arr;
 	}
 	
 	public void insertStudent(String name,int age,double height,
-								double weight, int grade,String major) {
+							  double weight, int grade,String major) {
 		
-		this.s = s;	
+			
 		
 		
 		for (int i = 0; i<s.length;i++) {
 			
 			if (s[i]==null) {
 			s[i] = new Student(name,age,height,weight,grade,major);
-			//???????????????????
-			}else {
-				
-				System.out.println("학생꽉참");
+			break;
+			
 			}
+		
 		}
 		
 		
@@ -38,6 +66,7 @@ public class PersonController {
 	
 	public Student[] printStudent() {
 		
+	
 		
 		
 		return null;
