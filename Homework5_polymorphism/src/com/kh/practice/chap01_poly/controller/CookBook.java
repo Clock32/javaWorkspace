@@ -32,7 +32,7 @@ public class CookBook extends Book {
 
 	@Override
 	public String toString() {
-		return "CookBook [coupon=" + coupon + ", toString()=" + super.toString() + "]";
+		return "CookBook [coupon=" + coupon + ", " + super.toString() + "]";
 	}
 	
 	

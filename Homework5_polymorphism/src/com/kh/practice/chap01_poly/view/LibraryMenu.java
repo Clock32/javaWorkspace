@@ -3,14 +3,31 @@ package com.kh.practice.chap01_poly.view;
 import java.util.Scanner;
 
 import com.kh.practice.chap01_poly.controller.LibraryController;
+import com.kh.practice.chap01_poly.model.vo.Member;
 
 public class LibraryMenu {
 
 	Scanner sc = new Scanner(System.in);
 	LibraryController lc = new LibraryController();
+	Member mm = new Member();
 	
 	
 	public void mainMenu() {
+		
+		System.out.print("회원 이름 : ");
+		String name = sc.next();
+		System.out.print("회원 나이 : ");
+		int age = sc.nextInt();
+		System.out.print("회원 성별 : ");
+		char gender = sc.next().charAt(0);
+		
+		Member pm = new Member (name,age,gender,0);
+		
+		
+		lc.insertMember(pm);
+		
+		
+		
 		
 		while (true) {
 			System.out.println("==== 메뉴 ====");
@@ -33,7 +50,7 @@ public class LibraryMenu {
 					 String key = sc.next();
 					 lc.searchBook(key); break; 
 				
-			case 4 : lc.rentBook(0); break;
+			case 4 : rentBook(); break;
 				
 			case 9 : System.out.println("프로그램을 종료합니다."); return;
 				
@@ -50,16 +67,32 @@ public class LibraryMenu {
 	
 	public void selectAll()	{
 		
-		
+		//lc에 구현
 	}
 	
 	public void searchBook() {
-		
+		//lc에 구현
 		
 	}
 
 	public void rentBook() {
+		lc.selectAll();
+		System.out.print("대여할 도서 번호 선택 : ");
+		int index = sc.nextInt();
 		
+		int result = lc.rentBook(index);
+		
+		if(result == 0) {
+			
+			System.out.println("성공적으로 대여되었습니다.");
+			
+		}else if(result == 1) {
+			
+			System.out.println("나이 제한으로 불가합니다.");
+		}else if (result == 2) {
+			
+			System.out.println("성공적으로 대여되었습니다. 쿠폰이 추가되었습니다.");
+		}
 		
 	}
 	
