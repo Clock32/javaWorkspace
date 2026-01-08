@@ -7,6 +7,5 @@ public class Run {
 	public static void main(String[] args) {
 		LeapView lv = new LeapView();
 		
-		
 	}
 }

@@ -1,10 +1,14 @@
 package com.kh.exception.run;
 
 import com.kh.exception.controller.A_UncheckedException;
+import com.kh.exception.controller.B_CheckedException;
+import com.kh.exception.controller.C_CustomException;
 
 public class Run {
-public static void main(String[] args) {
+public static void main(String[] args) throws C_CustomException {
 	A_UncheckedException au = new A_UncheckedException();
+	B_CheckedException bc = new B_CheckedException();
+	
 	/*
 	 * 에러 의 종류
 	 * 시스템 오류
@@ -36,7 +40,20 @@ public static void main(String[] args) {
 	 *
 	 */
 	
-	au.method1();
+	//au.method1();
+	//bc.method1();
+	
+	
+	/*
+	 * 에러 강제 발생
+	 * throw ne w애러클래스 생성자(ㅔㅇ러메세지)
+	 * 
+	 * 
+	 */
+		
+	throw new C_CustomException("에러발생");
+	
+	
 	
 }
 }

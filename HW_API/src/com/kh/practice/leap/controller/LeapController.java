@@ -34,10 +34,7 @@ public class LeapController {
 	
 	public long leapDate(Calendar c) {
 		
-		
-		
 		Calendar day = new GregorianCalendar(1,0,1);
-		
 		
 		//  두시간을 밀리초로 변환하여 차이를 구한다
 		long n = c.getTimeInMillis();
@@ -49,7 +46,7 @@ public class LeapController {
 		int date = day.getWeekYear();
 		int nDay = c.get(Calendar.DATE);
 		
-		System.out.println(nDay);
+		
 		
 		int sum = 0;
 		
