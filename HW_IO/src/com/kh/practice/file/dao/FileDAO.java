@@ -10,32 +10,9 @@ public class FileDAO {
 
 	public boolean checkName(String file) {
 
-		FileReader fr = null;
-		boolean how = false;
-
-		try {
-			fr = new FileReader(file);
-
-			if (fr == null) {
-
-				how = true;
-			}else {
-				
-				how = false;
-			}
-
-		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
-			how = true;
-		} finally {
-			try {
-				fr.close();
-			} catch (IOException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-		}
-
+		File f = new File(file);
+		boolean how = f.exists();
+		
 		return how;
 	}
 
@@ -62,6 +39,7 @@ public class FileDAO {
 
 	public StringBuilder fileOpen(String file) {
 
+		
 		return null;
 	}
 

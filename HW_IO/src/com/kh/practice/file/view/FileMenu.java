@@ -58,7 +58,7 @@ public class FileMenu {
 		
 		while(true) {
 		System.out.print("저장할 파일 명을 입력해주세요.(ex. myFile.txt) : ");
-		String fileName = sc.next();
+		String fileName = sc.nextLine();
 		
   		if(fc.checkName(fileName)) {
 			
@@ -72,8 +72,8 @@ public class FileMenu {
   				
   			}else {
 				
-  				fc.fileSave(fileName, context);
-  				break;
+  				
+  				continue;
 				
 				
 			}
@@ -82,13 +82,29 @@ public class FileMenu {
 		}
   		fc.fileSave(fileName, context);
 			break;
-		}
+		}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
 		
 			
 		
 	}
 	
 	public void fileOpen() {
+		
+		System.out.println("");
+		String open = sc.next();
+		
+		if(fc.checkName(open)) {
+			
+		fc.fileOpen(open);	
+		}else {
+			
+			System.out.println("없는 파일입니다.");
+			mainMenu();
+			return;
+			
+		}
+		
+		
 		
 		
 	}
