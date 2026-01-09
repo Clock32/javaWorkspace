@@ -13,7 +13,7 @@ public class ObjectDao {
 		/*
 		 * 파일에 저장할 객체
 		 */
-		///Phone p = new Phone("아이폰",13000,"1234");
+		Phone p = new Phone("아이폰",13000,"1234");
 		
 		/*
 		 *  ObjectOutputStream : 객체단위 출력을 지원하는 보조 스트림
