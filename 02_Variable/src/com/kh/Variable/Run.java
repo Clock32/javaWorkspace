@@ -1,19 +1,20 @@
 package com.kh.Variable;
 
 public class Run {
-	
-	
 	public static void main(String[] args) {
-		
 		A_Variable av = new A_Variable();
-		B_Cast bc = new B_Cast();
-		C_Scanner cs = new C_Scanner();
-		
 		//av.printVariable();
 		//av.initVariable();
+		
+		B_Cast bc = new B_Cast();
+		//bc.autoCasting();		
 		//bc.forceCasting();
-		cs.inputTest01();
 		
-		
+		C_Scanner cs = new C_Scanner();
+		cs.inputTest1();
 	}
 }
+
+
+
+

@@ -3,157 +3,145 @@ package com.kh.practice.func;
 import java.util.Scanner;
 
 public class OperatorPractice {
-
+	
 	Scanner sc = new Scanner(System.in);
-
-	public void practice01() {
-
+	
+	public void practice1() {
 		System.out.print("�ο� �� : ");
-		int num1 = sc.nextInt();
-
+		int person = sc.nextInt();
+		
 		System.out.print("���� ���� : ");
-		int num2 = sc.nextInt();
-
-		System.out.println("\n");
-
-		System.out.println("1�δ� ���� ���� : " + num2 / num1);
-		System.out.println("���� ���� ���� : " + num2 % num1);
-
+		int candys = sc.nextInt();
+		
+		System.out.println("1�δ� ���� ���� "+ (person / candys));
+		System.out.println("���� ���� ���� "+ (person % candys));
 	}
 
-	public void practice02() {
-
+	public void practice2() {
 		System.out.print("�̸� : ");
-		String name = sc.nextLine();
-
-		System.out.print("�г�(���ڸ�) : ");
-		int year = sc.nextInt();
-
-		System.out.print("��(���ڸ�) : ");
-		int group = sc.nextInt();
-
-		System.out.print("��ȣ(���ڸ�) : ");
+		String name = sc.next();
+		
+		System.out.print("�г� : ");
+		int grade = sc.nextInt();
+		
+		System.out.print("�� : ");
+		int classes = sc.nextInt(); 
+		
+		System.out.print("��ȣ : ");
 		int num = sc.nextInt();
-
-		System.out.print("����(M/F) : ");
-		char gender = sc.next().charAt(0);
-
-		System.out.print("����(�Ҽ��� �Ʒ� ��°�ڸ� ����) : ");
-		double grade = sc.nextDouble();
-
-		System.out.println(year + "�г� " + group + "�� " + num + "�� " + name + " "
-				+ (gender == 'M' || gender == 'm' ? "��" : "��") + "�л��� ������ " + grade + "�̴�.");
-
-	}
-
-	public void practice03() {
-
+		
 		System.out.print("���� : ");
-		int num = sc.nextInt();
-
-		System.out.print(num <= 13 ? "���" : (num <= 19 ? "û�ҳ�" : "����"));
-
+		char ch = sc.next().charAt(0);
+		
+		System.out.print("���� : ");
+		double d = sc.nextDouble();
+		
+		System.out.println(
+				grade+"�г� "+classes+"�� "+num+"�� "+name
+				+(ch == 'M' ? "���л�" : "���л�")
+				+ "�� ������ "+d+"�̴�.");
 	}
 
-	public void practice04() {
+	public void practice3() {
+		System.out.print("���� : ");
+		int age = sc.nextInt();
+		
+		String str = age <= 13 ? "���" : 
+						(age <= 19 ? "û�ҳ�" : "����");
+		System.out.println(str);
+	}
 
+	public void practice4() {
 		System.out.print("���� : ");
 		int kor = sc.nextInt();
-
+		
 		System.out.print("���� : ");
 		int eng = sc.nextInt();
-
+		
 		System.out.print("���� : ");
-		int mat = sc.nextInt();
-
-		int sum = kor + eng + mat;
+		int math = sc.nextInt();
+		
+		int sum = kor + eng + math;
 		double avg = sum / 3.0;
-
-		System.out.println("�հ� : " + sum);
-		System.out.println("��� : " + avg);
-		System.out.println(kor >= 40 && eng >= 40 && mat >= 40 && avg >= 60 ? "�հ�" : "���հ�");
-
+		System.out.println("�հ� : "+sum);
+		System.out.println("��� : "+avg);
+		
+		System.out.println(
+				kor >= 40 && eng >= 40 && math >= 40
+				&& avg >= 60.0 ? "�հ�" : "���հ�");
 	}
-
-	public void practice05() {
-
-		System.out.print("�ֹι�ȣ�� �Է��ϼ���(- ����) : ");
-		char ch = sc.nextLine().charAt(7);
-
-		System.out.println(ch == '3' || ch == '1' ? "����" : "����");
+	
+	public void practice5() {
+		System.out.print("�ֹι�ȣ�� �Է��ϼ���(-����) : ");
+		String str = sc.next();
+		char gender = str.charAt(7);// 1 �� | 2����
+		System.out.println(gender == '1' || gender == '3'
+				? "����" :"����" );
 	}
-
-	public void practice06() {
-
-		System.out.print("정수 1 : ");
+	
+	public void practice6() {
+		System.out.print("정수1 : ");
 		int num1 = sc.nextInt();
-
-		System.out.print("정수 2 : ");
+		
+		System.out.print("정수2 : ");
 		int num2 = sc.nextInt();
-
+		
 		System.out.print("입력 : ");
-		int num3 = sc.nextInt();
-
-		boolean result = num3 <= num1 || num3 > num2;
+		int input = sc.nextInt();
+		
+		boolean result = input <= num1 || 
+				input > num2;
+				
 		System.out.println(result);
 	}
-
-	public void practice07() {
-
-		System.out.print("�Է�1 : ");
+	
+	public void practice7() {
+		System.out.print("입력 1 :");
 		int num1 = sc.nextInt();
-
-		System.out.print("�Է�2 : ");
+		
+		System.out.print("입력 2 :");
 		int num2 = sc.nextInt();
-
-		System.out.print("�Է�3 : ");
+		
+		System.out.print("입력 3 :");
 		int num3 = sc.nextInt();
-
-		boolean result = num1 == num2 && num2 == num3;
-		System.out.println(result);
-
+		
+		boolean result = 
+				num1 == num2 &&
+				num2 == num3;
 	}
-
-	public void practice08() {
-
-		System.out.print("A����� ���� : ");
-		int A = sc.nextInt();
-
-		System.out.print("B����� ���� : ");
-		int B = sc.nextInt();
-
-		System.out.print("C����� ���� : ");
-		int C = sc.nextInt();
-
-		double a = 0.4;
-		double b = 0.0;
-		double c = 1.15;
-
-		double ma = (A * a) + A;
-		double mb = (B * b) + B;
-		double mc = (C * c);
-
-		System.out.println("A��� ����/����+a : " + A + "/" + ma + "\n" + (ma >= 3000 ? "3000 �̻�" : "3000 �̸�"));
-
-		System.out.println("B��� ����/����+a : " + B + "/" + mb + "\n" + (mb >= 3000 ? "3000 �̻�" : "3000 �̸�"));
-
-		System.out.println("C��� ����/����+a : " + C + "/" + mc + "\n" + (mc >= 3000 ? "3000 �̻�" : "3000 �̸�"));
-
-		// C����� ���ڳ� ��� ����� �ٸ� ������ ���� ������ ��Ȯ�ϰ� �Ϸ��� �ٲ۰��̴� ����� �۵��Ϸ��� A�� Bó�� ���� �ؾ��Ѵ�.
+	
+	public void practice8() {
+		System.out.print("A사원의 연봉 : ");
+		int salaryA = sc.nextInt();
+		
+		System.out.print("B사원의 연봉 : ");
+		int salaryB = sc.nextInt();
+		
+		System.out.print("C사원의 연봉 : ");
+		int salaryC = sc.nextInt();
+		
+		double inSalaryA = salaryA * 1.4;// 인센 0.4
+		double inSalaryB = salaryB * 1.0;// 인센 X
+		double inSalaryC = salaryC * 1.15;
+		
+		System.out.println("A사원 연봉/연봉+인센 : " 
+		+ salaryA +"/"+inSalaryA);
+		System.out.println(inSalaryA >= 3000 ? "3000이상": "3000이하");
+		
+		System.out.println("B사원 연봉/연봉+인센 : " 
+				+ salaryB +"/"+inSalaryB);
+				System.out.println(inSalaryB >= 3000 ? "3000이상": "3000이하");
+		
+		System.out.println("C사원 연봉/연봉+인센 : " 
+				+ salaryC +"/"+inSalaryC);
+				System.out.println(inSalaryC >= 3000 ? "3000이상": "3000이하");
 	}
-
-	public void why() {
-
-		System.out.print("2600 : ");
-		int C = sc.nextInt();
-
-		double c = 1.15;
-
-		double mc = (C * c);
-
-		System.out.println(mc + " / 2989.9999999999995 �� ���;� �Ѵ�");
-
-	}
+	
+	
+	
+	
+	
+	
 	
 	
 }

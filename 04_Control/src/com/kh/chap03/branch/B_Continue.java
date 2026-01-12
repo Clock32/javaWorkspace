@@ -1,35 +1,45 @@
 package com.kh.chap03.branch;
 
 public class B_Continue {
-	/*
-	 * continue 프로그램 실행 중 컨티뉴 문을 만나면 그 아래의 코드는 실행하지않고 반복문의 처음으로 다시 돌악ㄱ다서 실행한다 break
-	 * 하지만 다시
-	 */
-
-	public void method() {
-
-		for (int i = 0; i <= 10; i++) {
-			if (i % 2 == 0) {
-				continue;
+	/* 
+	 * continue : 
+	 *  - 프로그램 실행 중 continue문을 만나게 되면, 그 뒤에 있는 코드들은 실행하지 
+	 *    않고, 가장 가까운 반복문으로 돌아가서 재실행 한다.
+	 * */
+	public void method1() {
+		//홀수만 출력하기
+		for(int i =1; i<= 10; i++) {
+			if(i % 2 == 0) {
+				continue; // 뒤쪽 내용 무시.
 			}
-			System.out.print(i + " ");
-
+			System.out.print(i+" ");
 		}
-
 	}
-
+	
 	public void method2() {
-
+		// 1부터 100까지의 총 합계를 구하기
+		// 단, 6의 배수는 제외하고 더하기
 		int sum = 0;
-
-		for (int i = 0; i <= 100; i++) {
-			
-			if (i % 6 == 0) continue;
-			
+		for(int i = 1; i<= 100; i++) {
+			if(i % 6 == 0) continue;			
 			sum += i;
 		}
-		System.out.println("6의 배수를 제외한 1에서 100까지의 합은 : " + sum + "입니다.");
+		System.out.println("sum : "+sum);
 	}
 	
 	
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+

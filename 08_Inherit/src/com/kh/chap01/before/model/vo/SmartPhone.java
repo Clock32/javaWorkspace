@@ -1,27 +1,24 @@
 package com.kh.chap01.before.model.vo;
 
 public class SmartPhone {
-
+	
 	private String brand;
 	private String pCode;
 	private String pName;
 	private int price;
 	private String mobileAgency;
 	
-	
 	public SmartPhone() {
 		
-		
 	}
-	
-	public SmartPhone(String brand,String pCode,String pName,int price,String mobileAgency) {
-		
+
+	public SmartPhone(String brand, String pCode, String pName,
+			int price, String mobileAgency) {
 		this.brand = brand;
 		this.pCode = pCode;
 		this.pName = pName;
 		this.price = price;
-		this.mobileAgency = mobileAgency;
-		
+		this.mobileAgency = mobileAgency;		
 	}
 
 	public String getBrand() {
@@ -65,14 +62,16 @@ public class SmartPhone {
 	}
 	
 	
-	
-	public String information() {
-		
-		
-		return brand+" "+pCode+" "+pName+" "+price+" "+mobileAgency;
-	}
-	
-	
-	
-	
 }
+
+
+
+
+
+
+
+
+
+
+
+

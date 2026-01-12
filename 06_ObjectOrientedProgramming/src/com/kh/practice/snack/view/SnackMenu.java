@@ -4,15 +4,12 @@ import java.util.Scanner;
 
 import com.kh.practice.snack.controller.SnackController;
 
+// 입/출력 담당
 public class SnackMenu {
-
-	Scanner sc = new Scanner(System.in);
-	
-	SnackController scr = new SnackController();
-	
+	private Scanner sc = new Scanner(System.in);
+	private SnackController scr = new SnackController();
 	
 	public void menu() {
-		
 		System.out.println("스낵류를 입력하세요.");
 		
 		System.out.print("종류 : ");
@@ -30,19 +27,31 @@ public class SnackMenu {
 		System.out.print("가격 : ");
 		int price = sc.nextInt();
 		
-		
-		
 		System.out.println(scr.saveData(kind, name, flavor, numOf, price));
+		// 저장기능 필요
 		
-		
-		System.out.print("저장한 정보를 확인하시겠습니까? (y/n) : ");
-		char yn = sc.next().charAt(0);
-		if(yn == 'y'||yn =='Y') {
-			
-			System.out.println(scr.confirmData());
-			
+		System.out.print("저장한 정보를 확인하시겠습니까?(y/n) : ");
+		char ch = sc.next().charAt(0);
+		if(ch == 'y' || ch == 'Y') {
+			//상품정보 출력
+			String result = scr.confirmData();
+			System.out.println(result);
 		}
 		
 	}
 	
+	
 }
+
+
+
+
+
+
+
+
+
+
+
+
+

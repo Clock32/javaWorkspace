@@ -1,15 +1,24 @@
 package com.kh.chap04_assist.part02_object.model.vo;
 
-public class Phone {
+import java.io.Serializable;
 
-	
+/*
+ * 직렬화가 되지 않은 일반 클래스는 입/출력이 불가능
+ * 
+ * 직렬화(Serialization)
+ *  - 객체의 상태를 그대로 저장하거나, 복원하는 방식을 직렬화/역직렬화라고 부른다.
+ *  - 객체 데이터를 byte로 변환하여 입/출력 매체에 저장하는 과정을 직렬화
+ *  - 저장된 byte를 다시 객체상태로 복원하는 과정을 역직렬화라고 부른다.
+ *  - 자바에서는 직렬화를 위해서 Serializable인터페이스를 구현해야한다.
+ *  */
+public class Phone implements Serializable{
 	private String name;
 	private int price;
-	private String password;
-	
+	//transient는 객체 입출력시 해당값을 입출력하지 않게 하는 예약어
+	private transient String password;
+
 	public Phone() {
-		
-		
+
 	}
 
 	public Phone(String name, int price, String password) {
@@ -47,6 +56,13 @@ public class Phone {
 	public String toString() {
 		return "Phone [name=" + name + ", price=" + price + ", password=" + password + "]";
 	}
-	
-	
+
 }
+
+
+
+
+
+
+
+

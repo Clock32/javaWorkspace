@@ -1,7 +1,7 @@
 package com.kh.chap02_abstract.part02.model.vo;
 
 public abstract class Person {
-
+	
 	//일반필드
 	private String name;
 	private double weight;
@@ -9,10 +9,9 @@ public abstract class Person {
 	
 	public Person() {
 		
-		
 	}
 
-	public Person(String name, double weight, int health) {
+	protected Person(String name, double weight, int health) {
 		super();
 		this.name = name;
 		this.weight = weight;
@@ -43,17 +42,24 @@ public abstract class Person {
 		this.health = health;
 	}
 
-	
 	@Override
 	public String toString() {
 		return "Person [name=" + name + ", weight=" + weight + ", health=" + health + "]";
 	}
 	
-	
-	//일반 메서드, 생성자, 필드, (선택) 추상클래스
-	
+	//일반 메서드,  생성자, 필드 , 추상메서드
 	public abstract void eat();
 	public abstract void sleep();
-	
-	
 }
+
+
+
+
+
+
+
+
+
+
+
+

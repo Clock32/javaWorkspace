@@ -8,60 +8,65 @@ public class Phone {
 	
 	public Phone() {
 		
-		
 	}
 	
-	
-	public Phone(String name,String series,String brand,int price) {
+	public Phone(String name, String series, String brand, int price) {
 		this.name = name;
 		this.series = series;
 		this.brand = brand;
 		this.price = price;
-		
 	}
-
 
 	public String getName() {
 		return name;
 	}
 
-
 	public void setName(String name) {
 		this.name = name;
 	}
-
 
 	public String getSeries() {
 		return series;
 	}
 
-
 	public void setSeries(String series) {
 		this.series = series;
 	}
-
 
 	public String getBrand() {
 		return brand;
 	}
 
-
 	public void setBrand(String brand) {
 		this.brand = brand;
 	}
 
-
 	public int getPrice() {
 		return price;
 	}
-
 
 	public void setPrice(int price) {
 		this.price = price;
 	}
 	
 	public String information() {
-		
-		return name+" "+series+" "+brand+" "+price;
+		return name+", "+series+", "+brand+", "+price;
 	}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

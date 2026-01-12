@@ -3,366 +3,263 @@ package com.kh.practice.chap02.loop;
 import java.util.Scanner;
 
 public class LoopPractice {
-
+	
 	Scanner sc = new Scanner(System.in);
-
+	
 	public void practice1() {
-
-		while (true) {
-
-			System.out.print("1 이상의 숫자를 입력해주세요 : ");
-			int num = sc.nextInt();
-
-			if (num > 0) {
-				for (int i = 1; i <= num; i++) {
-
-					System.out.print(i + " ");
-
-				}
-
-				break;
-			}
-
-			System.out.println("다시한번 입력하십시오");
-
+		System.out.print("1이상의 숫자를 입력하세요 : ");
+		int num = sc.nextInt();
+		
+		// 1 , 2, 3 , .... num
+		for(int i = 1; i<=num; i++) {
+			System.out.print(i+" ");
 		}
-
+		
+		if(num < 1) {
+			System.out.println("1 이상의 숫자를 입력해주세요.");
+			practice1();
+		}
 	}
 
 	public void practice2() {
-
-		while (true) {
-
-			System.out.print("1 이상의 숫자를 입력해주세요 : ");
-			int num = sc.nextInt();
-
-			if (num > 0) {
-				for (int i = num; i >= 1; i--) {
-
-					System.out.print(i + " ");
-
-				}
-
-				break;
-			}
-
-			System.out.println("다시한번 입력하십시오");
-
+		System.out.print("1이상의 숫자를 입력하세요 : ");
+		int num = sc.nextInt();
+		
+		// 1 , 2, 3 , .... num
+		for(int i = num; i > 0; i--) {
+			System.out.print(i+" ");
 		}
-
+		
+		if(num < 1) {
+			System.out.println("1 이상의 숫자를 입력해주세요.");
+			practice2();
+		}
 	}
 
 	public void practice3() {
-
-		// 훨씬 더 좋은 버전 코드 공유 참조
-
+		System.out.print("정수 하나 입력 : ");
+		int num = sc.nextInt();
+		
 		int sum = 0;
-
-		System.out.print("정수를 하나 입력하세요 : ");
-		int ran = sc.nextInt();
-
-		for (int i = 1; i <= ran; i++) {
-			System.out.print(i + "+");
-
-			sum += i;
-
-			if (i == ran - 1) {
-
-				System.out.println(ran + " = " + (sum + ran));
-				break;
-			}
+		for(int i = 1; i<=num; i++) {
+			sum += i; // 1부터 정수까지의 합.
+			System.out.print(i+ (i != num ? " + " : " = ")); // 1 + 2 + 3 + 4 ..
 		}
-		System.out.print("    1부터 " + ran + "까지의 총합 : " + (sum + ran));
-
+		System.out.println(sum);
 	}
+	
 
 	public void practice4() {
-
-		// 훠얼씬 더 좋은거 코드 공유 참조
-
-		while (true) {
-
-			// int min = num1<num2 ? num1 : num2 ;
-			// int max = num1>num2 ? num1 : num2 ;
-
-			System.out.print("첫번째 숫자 : ");
-			int num1 = sc.nextInt();
-
-			System.out.print("두번째 숫자 : ");
-			int num2 = sc.nextInt();
-
-			if (num1 <= 0 || num2 <= 0) {
-
-				System.out.println("1 이상의 숫자를 입력해 주세요");
-
-			} else if (num1 > 0 && num2 > 0 && num1 < num2) {
-
-				for (int i = num1; i <= num2; i++) {
-
-					System.out.print(i + " ");
-				}
-
-			} else if (num1 > 0 && num2 > 0 && num1 > num2) {
-
-				for (int i = num2; i <= num1; i++) {
-
-					System.out.print(i + " ");
-
-				}
-
-			} else if (num1 == num2) {
-				System.out.println("두 숫자가 같습니다.");
-
-			}
-
+		System.out.print("첫 번째 숫자");
+		int num1 = sc.nextInt();
+		
+		System.out.print("두 번째 숫자");
+		int num2 = sc.nextInt();
+		
+		if(!(num1 > 0 && num2 > 0)){
+			System.out.println("1이상의 수를 입력해주세요.");
+			practice4();
+			return;
 		}
-
+		
+		int min = num1 > num2 ? num2 : num1;
+		int max = num1 > num2 ? num1 : num2;
+		
+		for(int i = min; i <= max; i++) {
+			System.out.print(i+" ");
+		}
 	}
 
 	public void practice5() {
-
-		while (true) {
-
-			System.out.print("숫자 : ");
-			int dan = sc.nextInt();
-			if (dan <= 0 || dan >= 10) {
-
-				System.out.println(" 1부터 9까지의 단을 입력해 주세요.");
+		while(true) {
+			System.out.print("숫자 : " );
+			int num = sc.nextInt();
+			
+			if(num > 9) {
+				System.out.println("9이하의 숫자만 입력해주세요.");
 				continue;
-
-			} else {
-
-				for (int i = dan; i <= 9; i++) {
-
-					for (int x = 1; x <= 9; x++) {
-
-						System.out.print(i + "x" + x + "=" + i * x + " | ");
-
-					}
-
-					System.out.println(
-							"\n------------------------------------------------------------------------------");
-
-				}
-				return;
 			}
+			
+			for(int dan = num; dan <= 9; dan++) {
+				System.out.println("===== "+dan+"단 =====");
+				for(int i = 1; i<=9; i++) {
+					System.out.println(dan+" X "+i+" = "+(dan * i));
+				}
+			}
+			break;
 		}
-
 	}
 
 	public void practice6() {
-
-		while (true) {
-
-			System.out.print("시작 숫자 : ");
-			int num1 = sc.nextInt();
-
-			System.out.print("공차 : ");
-			int num2 = sc.nextInt();
-
-			int sum = 0;
-
-			if (num1 > 0 && num2 > 0) {
-				sum = num1;
-				for (int i = 1; i <= 10; i++) {
-
-					sum += +num2;
-					System.out.print(sum + " ");
-
-				}
-
-				break;
-			}
-
-			System.out.println("다시한번 입력하십시오");
-
+		System.out.print("시작 수 ");
+		int num = sc.nextInt();
+		
+		System.out.print("공차 : ");
+		int gong = sc.nextInt();
+		
+		// 10회 반복하라
+		for(int i =0; i< 10; i++) {
+			System.out.print(num+" ");
+			num += gong;
 		}
-
 	}
 
+	
+	//
 	public void practice7() {
-
-		char yoon = 'd';
-
-		while (true) {
-			System.out.print("연산자 (+,-,*,/,%) : ");
-			String yon = sc.next();
-
-			if (yon.equals("exit")) {
-				System.out.println("프로그램을 종료합니다.");
-				return;
+		while(true) {
+			System.out.print("연산자 : ");
+			String str = sc.next();
+			char ch = str.charAt(0);
+			
+			if(str.equals("exit")) {
+				System.out.println("프로그램 종료.");
+				break;
 			}
-
-			System.out.print("첫번째 정수 : ");
+			
+			System.out.print("정수1 : ");
 			int num1 = sc.nextInt();
-
-			System.out.print("두번째 정수 : ");
+			
+			System.out.print("정수2 : ");
 			int num2 = sc.nextInt();
-
-			if (yon.length() == 1) {
-				yoon = yon.charAt(0);
-
-				switch (yoon) {
-
-				case '+':
-					System.out.println(num1 + " " + yon + " " + num2 + " = " + (num1 + num2));
-					return;
-
-				case '-':
-					System.out.println(num1 + " " + yon + " " + num2 + " = " + (num1 - num2));
-					return;
-
-				case '*':
-					System.out.println(num1 + " " + yon + " " + num2 + " = " + (num1 * num2));
-					return;
-
-				case '/':
-					if (num2 <= 0) {
-						System.out.println("0으로 나눌 수 없습니다. 다시 입력해주세요");
-						break;
-					}
-
-					System.out.println(num1 + " " + yon + " " + num2 + " = " + (num1 / num2));
-					return;
-
-				case '%':
-					if (num2 <= 0) {
-						System.out.println("0으로 나눌 수 없습니다. 다시 입력해주세요");
-						break;}
-					System.out.println(num1 + " " + yon + " " + num2 + " = " + (num1 % num2));
-					return;
-
-				default:
-					System.out.println("없는 연산자 입니다 다시 시도해 주십시오.");
-					break;
-				}
-
+			
+			if(num2 == 0 && (ch == '/' || ch == '%') ) {
+				System.out.println("0으로 나눌 수 없습니다.");
+				continue;
 			}
-
+			
+			switch(ch) {
+			case '+' :
+				System.out.println(num1 + ch + num2+" = "+ (num1+num2));
+				break;
+			case '-' :
+				System.out.println(num1 + ch + num2+" = "+ (num1-num2));
+				break;
+			case '*' :
+				System.out.println(num1 + ch + num2+" = "+ (num1*num2));
+				break;
+			case '/' :
+				System.out.println(num1 + ch + num2+" = "+ (num1 /(double) num2));
+				break;
+			case '%' :
+				System.out.println(num1 + ch + num2+" = "+ (num1 % num2));
+				break;
+			
+				
+			}
 		}
-
 	}
 
 	public void practice8() {
-		
-		System.out.print("첫번째 정수 : ");
+		//*
+		//**
+		//***
+		//****
+		System.out.print("정수 입력 : ");
 		int num = sc.nextInt();
-		
-		
-		for (int j = 1;j<=num;j++) {
-		
-		for (int i = 0; i<j; i++) {
-			
-			System.out.print("*");
+						
+		for(int j = 1; j < num+1; j++) {
+			for(int i=0; i<j; i++) {
+				System.out.print("*");
+			}
+			System.out.println();
 		}
-		System.out.println("");
-		}
+	
 	}
 
 	public void practice9() {
-		
-		System.out.print("첫번째 정수 : ");
-		int num = sc.nextInt();
-		
-		
-		for (int j = 1;j<=num;j++) {
-		
-		for (int i = 0; i<j; i++) {
-			
-			System.out.print("*");
-		}
-		System.out.println("");
-		}
-		
-		
+
 	}
 
-	public void practice10() 
-	{
-
-		while (true) 
-		{
-			
-			int so = 0;
-			
-			System.out.print("숫자를 입력하세요 : ");
-			int num = sc.nextInt();
-			
-			if (num > 0) 
-			{
-
-				for (int i = num; i >= 1; i--) 
-				{
-
-					if (num % i == 0) 
-					{
-						so++;
-					}
-				}
-
-				System.out.println(so == 2 ? "소수입니다." : "소수가 아닙니다.");
-				break;
-				
-				}else
-				{
-				System.out.println("잘못 입력하셨습니다 다시 입력해주세요.");
-				continue;
-				}
+	public void practice10() {
+		System.out.print("숫자 : ");
+		int num = sc.nextInt();
+		
+		if(num < 2) {
+			System.out.println("잘못 입력하셨습니다.");
+			return;
 		}
-
+		
+		// 소수는 1부터 n까지 나누었을 때 나누어 떨어지는 수가 1과 n뿐인 수
+		// num = 5
+		boolean isPrime = true;
+		for(int i = 2; i<num; i++) {
+			if(num % i == 0) {
+				System.out.println("소수가 아닙니다.");
+				isPrime = false;
+				break;
+			}
+		}
+		
+		if(isPrime) {
+			System.out.println("소수입니다");
+		}
 	}
 
 	public void practice11() {
+		System.out.print("숫자 : ");
+		int num = sc.nextInt();
 		
-			System.out.print("숫자 : ");
-			int num = sc.nextInt();
-			
-			int count = 0;
-			if (num<2) { 
-			System.out.println("잘못 입력하셨습니다");
+		if(num < 2) {
+			System.out.println("잘못 입력하셨습니다.");
 			return;
-			}
+		}
+		
+		// 외부반복문 : 2~내가 입력한 값까지 반복.
+		// 내부반복문 : 현재 값이 소수인지 아닌지 판단.
+		
+		// num = 5;
+		
+		int count = 0;
+		// i -> 2,3,4,5
+		for(int i = 2; i<=num; i++) {
+			boolean isPrime = true;
 			
-			for (int i = 2; i<=num;i++) {
-				boolean isPrime = true;
-				for (int j = 2; j<i;j++) {
-					
-					if(i % j == 0) {
-						isPrime = false;
-						break;
-					}
-					
-					
-							
+			for(int j = 2; j< i; j++) {
+				if(i % j == 0) {
+					isPrime = false;
+					break;
 				}
-				if(isPrime) {
-					count++;
-					System.out.println(i+" ");
-					}
-				
 			}
-			
-			System.out.println("\n2부터 "+num+"까지의 소수의 개수는 "+count+"입니다");
-			
-			}	
+			if(isPrime) {
+				count++;
+				System.out.print(i + " ");				
+			}
+		}
+		
+		System.out.println("\n2부터 "+num+"까지 소수의 개수는 "+count+"개 입니다.");
+	}
 
 	public void practice12() {
-
-			System.out.print("자연수 하나를 입력하세요 : ");
-			int num = sc.nextInt();
-			int count = 0;
-			
-			for(int i=1;i<=num;i++) {
-				if(i%2==0 || i%3==0) {
-					System.out.print(i+" ");	
-				}
-				
-				if(i%2==0 && i%3==0) {
-					count++;
-					System.out.print(i+" ");
-				}			
-			}
-			System.out.println("\ncount : "+count);
 		
+		System.out.print("자연수 하나를 입력하세요. ");
+		int num = sc.nextInt();
+		
+		int count = 0;
+		for(int i=1; i<= num; i++) {
+			// 1. 2 혹은 3의 배수이면 출력.
+			if(i % 2 == 0 || i % 3 == 0) {
+				System.out.print(i+" ");
+			}
+			// 2. 2와3의 공배수이면 갯수 카운팅
+			if(i % 2 == 0 && i % 3 == 0) {
+				count++;
+			}
+		}
+		System.out.println("\n count : "+count);
 	}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+

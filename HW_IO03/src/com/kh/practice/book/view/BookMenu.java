@@ -84,15 +84,10 @@ public class BookMenu {
 		
 		//반복문?	
 		Book bTemp = new Book(title, author, price, cal, discount);
+		
 		bArr[0] = bTemp;
-		//
-		
-		
-		
-		
 		
 		// 비어있는 Book객체 배열(bArr)에 담아 bc에 fileSave()에 매개변수로 전달
-		
 		
 		bc.fileSave(bArr);
 	}
@@ -105,7 +100,7 @@ public class BookMenu {
 		System.out.println(bc.fileRead());  // ? 
 		
 	}
-	
+	//일반 ㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌ
 	
 	
 }

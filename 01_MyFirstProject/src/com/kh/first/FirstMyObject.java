@@ -1,11 +1,19 @@
 package com.kh.first;
-//ÆĞÅ°Áö¸î + Å¬·¡½º¸í == Ç®Å¬·¡½º¸í
+// package + classëª… == í’€í´ë˜ìŠ¤ëª…
+
 import java.util.Date;
 
 public class FirstMyObject {
-	//ÀÚ¹Ù ¼ø¼­ ±×°Å
+	
+	// ìë°”ëŠ” ì‹¤í–‰í•˜ê¸° ìœ„í•´ ë°˜ë“œì‹œ mainë©”ì„œë“œê°€ ì¡´ì¬í•´ì•¼ í•œë‹¤.
 	public static void main(String[] args) {
-		System.out.println("Hello World!!");
+		System.out.println("ì•ˆë…• ã…‹ã…‹");
 		System.out.println(new Date());
 	}
+	
 }
+
+
+
+
+

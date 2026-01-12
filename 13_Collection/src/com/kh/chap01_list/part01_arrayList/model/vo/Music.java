@@ -1,8 +1,6 @@
 package com.kh.chap01_list.part01_arrayList.model.vo;
 
 public class Music {
-
-	
 	private String title;
 	private String artist;
 	
@@ -36,7 +34,5 @@ public class Music {
 	public String toString() {
 		return "Music [title=" + title + ", artist=" + artist + "]";
 	}
-	
-	
 	
 }

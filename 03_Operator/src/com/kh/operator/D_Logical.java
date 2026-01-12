@@ -1,84 +1,69 @@
 package com.kh.operator;
+
 import java.util.Scanner;
 
 public class D_Logical {
-	
+	/* 
+	 * ë…¼ë¦¬ ì—°ì‚°ì 
+	 *  - ë…¼ë¦¬ ê°’ ë‘ê°œë¥¼ ë¹„êµí•˜ëŠ” ì—°ì‚°ì
+	 * 
+	 * AND && : a && b -> aì™€ bê°€ ëª¨ë‘ ì°¸ì¼ ê²½ìš° trueë°˜í™˜.
+	 *                    aì™€ b ë‘˜ ì¤‘ í•˜ë‚˜ë¼ê³  ê±°ì§“ì¼ ê²½ìš° false.
+	 *                    
+	 * OR  || : a || b -> aì™€ bë‘˜ ì¤‘ í•˜ë‚˜ë¼ë„ ì°¸ì¼ê²½ìš° true, 
+	 *                    aì™€ b ë‘˜ ë‹¤ ê±°ì§“ì¸ ê²½ìš° falseë°˜í™˜.
+	 * ~í•˜ë©´ì„œ => AND
+	 * ë˜ëŠ” => OR                   
+	 *                    
+	 * */
 	Scanner sc = new Scanner(System.in);
-	
-	/*
-	 * ³í¸® ¿¬»êÀÚ 
-	 * ³í¸® °ª µÎ°³¸¦ ºñ±³ÇÏ´Â ¿¬»êÀÚ
-	 * 
-	 * AND ¿¬»êÀÚ && : a&&b == a¶û b°¡ ¸ğµÎ ÂüÀÏ °æ¿ì¿¡¸¸ true ¸¦ ¹İÈ¯ÇÏ¿©¶ó == ±×·¯´Ï µÑ Áß ÇÏ³ª¶óµµ false ¸é false°¡ ¹ß»ıÇÑ´Ù
-	 * 
-	 * OR ¿¬»êÀÚ || : a||b == aÈ¤Àº bÁß ¾Æ¹«°Å³ª ÂüÀÏ °æ¿ì true ¸¦ ¹İÈ¯ÇÑ´Ù == ±×·¯´Ï false¸¦ ¹İÈ¯ÇÏ·Á¸é µÑ´Ù false ¿©¾ßÇÑ´Ù
-	 * 
-	 * ~ÇÏ¸é¼­ == AND // ~¶Ç´Â == OR 
-	 * 
-	 */
-	
 	public void method1() {
-		
-		System.out.println("¼ıÀÚ¸¦ ÇÏ³ª ÀÔ·ÂÇÏ¼¼¿ä : ");
+		System.out.print("ìˆ«ìë¥¼ í•˜ë‚˜ ì…ë ¥í•˜ì„¸ìš”.");
 		int num = sc.nextInt();
 		
-		//³ÑÀÇ °ªÀÌ 0º¸´Ù Å©¸é¼­ Â¦¼öÀÔ´Ï±î?
-		
-		boolean result = (num > 0) && (num%2 == 0);
-		
-		System.out.println("ÀÔ·ÂÇÏ½Å ¼ıÀÚ´Â Â¦¼ö°¡"+result+"ÀÔ´Ï´Ù");
-		
+		// numì˜ ê°’ì´ 0ë³´ë‹¤ í¬ë©´ì„œ ì§ìˆ˜ì…ë‹ˆê¹Œ?
+		boolean result = (num > 0) && (num % 2 == 0);
 	}
 	
 	public void method2() {
+		// ì…ë ¥í•œ ê°’ì´ 1 ì´ìƒ 100 ì´í•˜ì˜ ìˆ«ìì¸ì§€ í™•ì¸.
+		// 1 <= x <= 100
+		System.out.print("ì •ìˆ˜ : ");
+		int num = sc.nextInt();
 		
-		/*
-		 * ÀÔ·ÂÇÑ °ªÀÌ 1 ÀÌ»ó 100 ÀÌÇÏÀÇ ¼ıÀÚÀÎÁö È®ÀÎ
-		 * 1<=x && x<= 100 
-		 */
-		
-		System.out.println("Á¤¼ö¸¦ ÇÏ³ª ÀÔ·ÂÇÏ¼¼¿ä : ");
-		int num1 = sc.nextInt();
-		
-		boolean result1 = (num1 >= 1) && (num1 <= 100);
-		
-		System.out.println("ÀÔ·ÂÇÏ½Å ¼ıÀÚ´Â 1º¸´Ù Å©°í 100º¸´Ù ÀÌÇÏÀÎ ¼ıÀÚ°¡"+result1+"ÀÔ´Ï´Ù");
-		
-		
+		// 1 <= x <= 100ì„ ìë°”ì‹ìœ¼ë¡œ ë³€í™˜
+		// (1 <= x) && (x <= 100)
+		boolean result = 1 <= num && num <= 100;
 	}
 	
 	public void method3() {
+		// ì‚¬ìš©ìê°€ ì…ë ¥í•œ ê°’ì´ 'y'ê±°ë‚˜ 'Y'ì¸ ê²½ìš° ì°¸, ì•„ë‹ˆë©´ ê±°ì§“ì„ ë°˜í™˜í•˜ì‹œì˜¤.
+		System.out.print("ê³„ì† ì§„í–‰í•˜ì‹œë ¤ë©´ yë¥¼ ì…ë ¥í•´ì£¼ì„¸ìš” : ");
+		char ch = sc.next().charAt(0);
 		
-		//»ç¿ëÀÚ°¡ ÀÔ·ÂÇÑ °ªÀÌ y°Å³ª YÀÎ °æ¿ì Âü ¾Æ´Ï¸é °ÅÁşÀ» ¹İÈ¯ÇÏ¶ó
-		
-		System.out.println("Y¸¦ ÀÔ·ÂÇÏ½Ã¿À : ");
-		char ch = sc.next().charAt(0); // ½Ç¹«¿¡¼­´Â ±×³É ±ÛÀÚ »©¼­ ÀÚµ¿´ë¹®ÀÚ º¯È¯À»ÇÏÁö¸¸ ÀÌ°Ç ½Ç½ÀÀÌ´Ï ÀÏºÎ·¯ ºÒÆíÇÏ°Ô ±¸»ó
-		
-		boolean result2 = ch == 'y' || ch == 'Y';
-		
-		System.out.println("ÀÔ·ÂÇÏ½Å ¹®ÀÚ´Â Y°¡ "+result2+"ÀÔ´Ï´Ù");
-		
+		boolean result = ch == 'y' || ch == 'Y';
 	}
 	
 	public void method4() {
-		
-		//and¿¬»êÀÚÀÇ °æ¿ì a and b ÀÇ Á¶°Ç Áß a ÀÇ °ªÀÌ false ÀÎ °æ¿ì µÚÂÊ Á¶°Ç½ÄÀº ½ÇÇàÇÏÁö¾Ê´Â´Ù
-		//±×·¡¼­ °á°ú°¡ 10À¸·Î ³ª¿Â´Ù
 		int num1 = 10;
+		
+		// andì—°ì‚°ìì˜ ê²½ìš° A && Bì˜ ì¡°ê±´ ì¤‘ Aì˜ ê°’ì´ falseì¸ ê²½ìš°
+		// ë’¤ ìª½ ì¡°ê±´ë“¤ì´ ë­ë“  ë¬´ì¡°ê±´ falseì´ê¸° ë•Œë¬¸ì— ë’¤ìª½ ì¡°ê±´ì‹ì€ ì‹¤í–‰í•˜ì§€
+		// ì•ŠëŠ”ë‹¤.
+		boolean result1 = (num1 < 5) && (num1++ > 0);
+		System.out.println("result1 : " + result1);
+		System.out.println(num1);// 11
+		
 		int num2 = 10;
-		
-		boolean result1 = (num1<5) && (num1++ > 0);
-		
-		System.out.println(result1);
-		System.out.println(num1);
-		
-		boolean result2 = (num2 <20) || (++num2 >0);
-		
-		System.out.println(result2);
-		System.out.println(num2);
-		
-		//°ÅÁş »Ó¸¸ ¾Æ´Ï¶ó ÂüÀÌ¾îµµ µÚÂÊ ½ÇÇàÇÏÁö¾Ê´Â´Ù.
+		boolean result2 = num2 < 20 || ++num2 > 0; // true
+		System.out.println(num2);// 10
 	}
 	
 	
+	
 }
+
+
+
+
+

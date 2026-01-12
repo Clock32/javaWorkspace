@@ -1,130 +1,88 @@
 package com.kh.chap02.loop;
 
-import java.util.Scanner;
-
 public class B_While {
 	/*
-	 * 표현법
+	 * while문
+	 * [표현법]
 	 * 
-	 * 초기식 필수아님
-	 * 
-	 * while(조건식){ //반복적수행
-	 * 
-	 * (증감식) 필수아님
-	 * 
+	 * [초기식] // 필수아님
+	 * while(조건식){
+	 * 	// 반복적으로 수행할 코드
+	 *  [증감식]// 필수아님
 	 * }
-	 * 
-	 * 
-	 */
-	Scanner sc = new Scanner(System.in);
-
-	public void test() {
-		// switch를 사용해서 만들어도 괜찮지 않읗ㄹ까 싶은데
-		// switch 킬코들같은걸 만들어서 하면 좋징낳을까
-
-		int end = 0;
-
-		while (end == 9) {
-
-			System.out.println("정수를 입력하세요 : ");
-			int num = sc.nextInt();
-			end = num;
-
-			if (num > 0) {
-
-				System.out.println("양수입니다.");
-
-			} else if (num == 0) {
-
-				System.out.println("0입니다.");
-
-			} else {
-
-				System.out.println("음수입니다.");
-			}
-
-		}
-
-	}
-
+	 *  */
 	public void method1() {
-
-		int i = 1; // 초기식
-		while (i <= 5)// 조건식
-		{
-
-			System.out.println("Hello Wolrd!");
-
-			i++; // 증감식
-
+		// for문을 while문으로 변경
+		int i = 0;// 초기식
+		while(i < 5) { // 조건식
+			System.out.println("안녕");
+			i++;
 		}
+		System.out.println(i);// 5
 	}
-
+	
 	public void method2() {
-
-		int i = 0;
-		int sum = 1;
-		while (i < 5) {
-
-			System.out.print(sum++ + " ");
-			i++;
+		// while문으로 5회 반복하여 아래 코드 출력
+		// 1 2 3 4 5
+		int i = 1;
+		while(i <= 5) {
+			System.out.print(i++ +" ");		
 		}
 	}
-
+	
 	public void method3() {
-		// 1부터 랜덤값 까지의 총 합계를 whike 문으로 작성하라 출력예시 1부터 x 까지의 합계는 xxxㅇ빈디ㅏ
-
+		// 1부터 랜덤값(1~10)까지의 총 합계를 while문으로 작성
+		// 출력예시 : 1부터 x까지의 합계는 x입니다.
+		int random = (int)(Math.random() * 10 +1);
+		
 		int sum = 0;
-		int ran = (int) ((Math.random() * 10) + 1);
-		int i = 0;
-
-		while (i <= ran) {
-
-			sum += i;
-			i++;
-
+		int i = 1;
+		
+		while(i <= random) {
+			sum += i++;			
 		}
-		System.out.print("1부터 " + ran + "까지의 총합 : " + sum);
-
+		System.out.println("1부터 "+random+"까지의 총 합계 : "+sum);
 	}
-
+	
+	/*
+	 * do-while
+	 * [표현법]
+	 * do {
+	 * 	// 반복 실행할 코드(단, 최초1회는 반드시 수행)
+	 * } while(조건식);
+	 * - do-while문은 별도의 조건검사 없이 최초 1회는 무조건 실행된다. 
+	 *  */
 	public void method4() {
-		/*
-		 * do-while문 표현법 - 한번도 안쓸정도로 잘 안쓴다
-		 * 
-		 * do { 반복실행 할 코드
-		 * 
-		 * }while(조건문){
-		 *
-		 * } do while은 별도의 조건검사 ㅇ벗이 최초 1회는 무조건 실행한다
-		 * 
-		 */
 		do {
-			System.out.println("Hello again");
-		} while (false);
-		{
-		}
-
+			System.out.println("하이!");
+		}while(false);
 	}
-
+	
 	public void method5() {
-		int i = 0;
-		int sum = 1;
+		// do-while문을 활용하여
+		// 1 2 3 4 5 출력
+		int i = 1;
 		do {
-
-			System.out.print(sum++ + " ");
+			System.out.print(i +" ");
 			i++;
-
-		} while (i < 5);
-		{
-
-		}
+		}while(i <= 5);
 	}
-
-	public void method6() {
-		
-		
-		
-	}
-
+	
+	
+	
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

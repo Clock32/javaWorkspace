@@ -1,31 +1,25 @@
 package com.kh.chap01.before.model.vo;
 
 public class Desktop {
-
+	
 	private String brand;
 	private String pCode;
 	private String pName;
 	private int price;
 	private boolean allInOne;
 	
-	
 	public Desktop() {
-		
 		
 	}
 	
-	public Desktop(String brand,String pCode,String pName,int price,boolean allInOne) {
+	public Desktop(String brand, String pCode, String pName, 
+			int price, boolean allInOne) {
 		this.brand = brand;
 		this.pCode = pCode;
 		this.pName = pName;
 		this.price = price;
 		this.allInOne = allInOne;
-		
 	}
-	
-	
-	
-	
 
 	public String getBrand() {
 		return brand;
@@ -67,13 +61,17 @@ public class Desktop {
 		this.allInOne = allInOne;
 	}
 	
-	
 	public String information() {
-		
-		
-		return brand+" "+pCode+" "+pName+" "+price+" "+allInOne;
+		return brand+", "+pCode+", "+pName+", "+price+", "+allInOne;
 	}
-	
-	
-	
 }
+
+
+
+
+
+
+
+
+
+

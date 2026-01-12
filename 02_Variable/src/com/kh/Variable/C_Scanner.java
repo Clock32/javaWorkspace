@@ -3,49 +3,42 @@ package com.kh.Variable;
 import java.util.Scanner;
 
 public class C_Scanner {
-	//½Ç¹«¿¡¼­´Â »ç¿ë¾ÈÇÏ´Â ScannerÀÌ´Ù
-	// »ç¿ëÀÚ°¡ Å°º¸µå·Î Á÷Á¢ ÀÔ·ÂÇÑ °ªÀ» º¯¼ö¿¡ ÀúÀåÇÒ ¼ö ÀÖ°Ô µµ¿ÍÁÖ´Â Å¬·¡½ºÀÌ´Ù
+	// ì‚¬ìš©ìê°€ í‚¤ë³´ë“œë¡œ ì§ì ‘ ì…ë ¥í•œ ê°’ì„ ë³€ìˆ˜ì— ì €ì¥í•  ìˆ˜ ìˆê²Œ ë„ì™€ì£¼ëŠ” í´ë˜ìŠ¤ 
 	
-	public void inputTest01() {
-		
+	public void inputTest1() {
 		Scanner sc = new Scanner(System.in);
 		
-		//»ç¿ëÀÚÀÇ ÀÎÀû»çÇ× Á¤º¸ ÀÔ·Â¹Ş±â
-		
-		System.out.print("´ç½ÅÀÇ ÀÌ¸§À» ÀÔ·ÂÇØ ÁÖ¼¼¿ä : ");
-		/*
-		 * »ç¿ëÀÚ°¡ ÀÔ·ÂÇÑ °ªÀ» ¹®ÀÚ¿­·Î ¹Ş¾Æ¿À´Â ¸Ş¼­µå
-		 * 1. nextline() : »ç¿ëÀÚ°¡ ÀÔ·ÂÇÑ °ªÀ» ¿£ÅÍ ±âÁØÀ¸·Î ¸ğµÎ °¡Á®¿À´Â ¸Ş¼­µå - °ªÀ» °¡Á®¿Â ÈÄ '°³Çà¹®ÀÚ - ¿£ÅÍ'¸¦ ºñ¿öÁØ´Ù
-		 * 
-		 * 2. next() : »ç¿ëÀÚ°¡ ÀÔ·ÂÇÑ °ªÀ» °ø¹é ±âÁØÀ¸·Î °¡Á®¿À´Â ¸Ş¼­µå. - È÷È÷ ¾Èºñ¿öÁà
-		 */
+		//ì‚¬ìš©ìì˜ ì¸ì ì‚¬í•­ì •ë³´ ì…ë ¥ë°›ê¸°
+		System.out.print("ë‹¹ì‹ ì˜ ì´ë¦„ì„ ì…ë ¥í•´ ì£¼ì„¸ìš”..");
+		// ì‚¬ìš©ìê°€ ì…ë ¥í•œ ê°’ì„ "ë¬¸ìì—´"ë¡œ ë°›ì•„ì˜¤ëŠ” ë©”ì„œë“œ
+		// 1. nextLine() : ì‚¬ìš©ìê°€ ì…ë ¥í•œ ê°’ì„ "ì—”í„°"ë¥¼ ê¸°ì¤€ìœ¼ë¡œ
+		// ëª¨ë‘ ê°€ì ¸ì˜¤ëŠ” ë©”ì„œë“œ. ê°’ì„ ê°€ì ¸ì˜¨ í›„ ê°œí–‰ë¬¸ì(ì—”í„°)ëŠ” ë¹„ì›Œì¤€ë‹¤.
+		// 2. next() : ì‚¬ìš©ìê°€ ì…ë ¥í•œ ê°’ì„ ê³µë°± ê¸°ì¤€ìœ¼ë¡œ ê°€ì ¸ì˜¤ëŠ” ë©”ì„œë“œ.
+		// ë¯¼ ê²½ë¯¼
 		
 		//String name = sc.nextLine();
-		//System.out.println(name);
+		String firstname = sc.next();//ë¯¼\n
+		sc.nextLine();// ê°œí–‰ë¬¸ì ë¹„ì›Œì£¼ê¸° ì‘ì—… í•„ìš”
+		String lastname = sc.nextLine();//ê²½ë¯¼
 		
-		String firstName = sc.next();
-		sc.nextLine(); //ÀÌ·±½ÄÀ¸·Î °íÄ¥¼ö´Â ÀÖ´Âµ¥ µå·´°Ô ¹ø°Å·Ó°í ±ÍÂú°í º¸±â³ª»Ú´Ù Á¦´ë·Î ÀÛµ¿µµ¾ÈÇÏ°í ¾È³»±ÛÀÚ Ãß°¡ÇØ¾ßÇÏ°í ±×³É µå·¯¿ö
-		String lastName = sc.nextLine();
+		System.out.println(firstname + lastname);
 		
-		System.out.println(firstName + lastName);
-		//next´Â °³Çà¹®ÀÚ¸¦ ¾È¾ø¾ÖÁÖ±â¶§¹®¿¡ ¼º¸¸Ä¡°í ¿£ÅÍ¸¦Ä¡¸é °³Çà¹®ÀÚ°¡ »ì¾Æ¼­ ÀÌ¸§À» ÀÔ·ÂÇÏ±âÀü¿¡ Áö ¸¶À½´ë·Î ³¡³»¹ö¸°´Ù 
-		
-		System.out.println("´ç½ÅÀÇ ³ªÀÌ¸¦ ÀÔ·ÂÇØ ÁÖ¼¼¿ä : ");
+		System.out.println("ë‹¹ì‹ ì˜ ë‚˜ì´ëŠ” ëª‡ì‚´ ì…ë‹ˆê¹Œ?");
 		int age = sc.nextInt();
 		
-		System.out.println("´ç½ÅÀÇ Å°¸¦ ÀÔ·ÂÇØ ÁÖ¼¼¿ä : ");
-		Double height = sc.nextDouble();
+		System.out.println("ë‹¹ì‹ ì˜ í‚¤ëŠ” ëª‡ cmì…ë‹ˆê¹Œ?");
+		double height = sc.nextDouble();
 		
-		//ÀÔ·ÂÇÑ µ¥ÀÌÅÍ¸¦ ¹®ÀÚÇüÀ¸·Î »Ì±â
-		// StringÀÇ charAt(0)À» ÀÌ¿ëÇÏ¿© ¹®ÀÚ¿­À» ¹®ÀÚ·Î »ÌÀÚ
-		System.out.println("´ç½ÅÀÇ ¼ºº°À» M È¤Àº F ·Î ÀÔ·ÂÇØ ÁÖ¼¼¿ä : ");
+		// ì…ë ¥í•œ ë°ì´í„°ë¥¼ ë¬¸ìí˜•ìœ¼ë¡œ ë½‘ê¸°
+		// Stringì˜ charAt(0) => ë¬¸ìì—´ì˜ ì²«ë²ˆì§¸ ê¸€ìë¥¼ ë¬¸ìë¡œ ë½‘ëŠ” ë©”ì„œë“œ
+		System.out.println("ë‹¹ì‹ ì˜ ì„±ë³„ì€?(M/F)");
 		//char gender = sc.next().charAt(0);
-		
 		String gender = sc.next();
 		char gender2 = gender.charAt(0);
 		
-		System.out.println("´ç½ÅÀÇ ÀÌ¸§Àº "+firstName+lastName+"\n´ç½ÅÀÇ ³ªÀÌ´Â "+age+"\n´ç½ÅÀÇ Å°´Â "+height+"\n´ç½ÅÀÇ ¼ºº°Àº "+gender2);
-		
-		
 	}
+	
+	
+	
+		
 }
