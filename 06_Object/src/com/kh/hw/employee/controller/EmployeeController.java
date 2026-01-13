@@ -26,16 +26,16 @@ public class EmployeeController {
 		
 	}
 	
-	public Employee remove() {
-		
-	}
-	
-	public String inform() {
-		
-	}
-	
-	
-	
+//	public Employee remove() {
+//		
+//	}
+//	
+//	public String inform() {
+//		
+//	}
+//	
+//	
+//	
 	
 	
 	

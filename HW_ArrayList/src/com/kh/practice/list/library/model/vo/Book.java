@@ -12,6 +12,7 @@ public class Book {
 	
 	public Book() {
 		
+		
 	}
 
 
@@ -92,7 +93,7 @@ public class Book {
 	
 	public int compareTo() {
 		
-		
+		return 1;
 	}
 	
 }
