@@ -6,7 +6,7 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.TreeSet;
 
-import com.kh.practice.set.compare.SortedLottery;
+//import com.kh.practice.set.compare.SortedLottery;
 import com.kh.practice.set.model.vo.Lottery;
 
 public class LotteryController {

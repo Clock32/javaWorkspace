@@ -1,6 +1,9 @@
 package com.kh.practice.map.view;
 
+import java.util.Map.Entry;
 import java.util.Scanner;
+import java.util.Set;
+import java.util.TreeMap;
 
 import com.kh.practice.map.controller.MemberController;
 import com.kh.practice.map.model.vo.Member;
@@ -48,6 +51,7 @@ public class MemberMenu {
 	
 	public void memberMenu() {
 		
+		while(true) {
 		System.out.println("******* 회원 메뉴 *******");
 		System.out.println("1. 비밀번호 바꾸기");
 		System.out.println("2. 이름 바꾸기");
@@ -62,13 +66,13 @@ public class MemberMenu {
 		
 		case 2 : changeName(); break;
 			
-		case 3 : System.out.println("로그아웃 되었습니다.");  mainMenu(); break;
+		case 3 : System.out.println("로그아웃 되었습니다.");  mainMenu(); return;
 			
-		default : System.out.println("잘못 입력하였습니다. 다시 입력해주세요."); break;
+		default : System.out.println("잘못 입력하였습니다. 다시 입력해주세요.");
 			
-		
 		
 		}
+	}
 		
 		
 		
@@ -109,6 +113,7 @@ public class MemberMenu {
 	
 	public void logIn() {
 		
+		while(true) {
 		System.out.print("아이디 : ");
 		String id = sc.next();
 		System.out.print("비밀번호 : ");
@@ -120,14 +125,13 @@ public class MemberMenu {
 		if (result != null) {
 			
 			System.out.println(result+"님, 환영합니다!");
+			break;
 			
 		}else {
 			
 			System.out.println("틀린 아이디 또는 비밀번호입니다. 다시 입력해주세요.");
-			logIn();
-			return;
 		}
-		
+		}
 		
 		
 //		아이디와 비밀번호를 사용자에게 받아 mc의 logIn()메소드로 넘겨 줌
@@ -137,15 +141,65 @@ public class MemberMenu {
 	
 	public void changePassword() {
 		
+		while(true) {
+		System.out.print("아이디 : ");
+		String id = sc.next();
+		System.out.print("비밀번호 : ");
+		String pass = sc.next();
 		
+		System.out.print("변경할 비밀번호 : ");
+		String change = sc.next();
+		
+		boolean result = mc.changePassword(id, pass, change);
+		
+		if(result) {System.out.println("비밀번호 변경 성공"); break;
+		}else { System.out.println("비밀번호 변경 실패");
+		}
+		}
 	}
 	
 	public void changeName() {
 		
+		System.out.print("아이디 : ");
+		String id = sc.next();
+		System.out.print("비밀번호 : ");
+		String pass = sc.next();
+		
+		String name = mc.logIn(id, pass);
+		if (name == null) {
+			System.out.println("변경 실패");
+			changeName();
+			return;
+		}
+		System.out.println(name);
+		
+		System.out.println("변경할 이름 : ");
+		String change = sc.next();
+		
+		mc.changeName(id, change);
+		
+		
+		System.out.println("이름변경에 성공했습니다");
 		
 	}
 	
 	public void sameName() {
+		
+		System.out.print("검색할 이름 : ");
+		String search = sc.next();
+		
+		TreeMap <String , String > map = mc.sameName(search);
+		
+		Set<Entry<String,String>>entrys = map.entrySet();
+		
+		for(Entry<String,String> entry : entrys) {
+			
+			System.out.println(entry.getValue()+"-"+entry.getKey());
+			
+		}
+		
+		
+		
 		
 		
 	}
