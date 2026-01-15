@@ -11,5 +11,13 @@ public class EmptyException extends Exception{
 		
 		super (message);
 		
+		System.out.println("오류");
+		try {
+			wait();
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
 	}
 }

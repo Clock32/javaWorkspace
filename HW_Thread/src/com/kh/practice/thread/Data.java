@@ -21,8 +21,8 @@ public class Data {
 					e.printStackTrace();
 				}
 			}
+			//String errMessage = e.getMessage(); ==  에러 메시지 기져오기;
 			
-			value = value;
 			isEmpty = false;
 			//스레드 실행
 			System.out.println("값이 입력되었습니다.");

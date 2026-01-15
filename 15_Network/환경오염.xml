@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<response>
+  <header>
+    <resultCode>11</resultCode>
+    <resultMsg>NO_MANDATORY_REQUEST_PARAMETERS_ERROR</resultMsg>
+  </header>
+</response>

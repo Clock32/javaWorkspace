@@ -17,6 +17,9 @@ public class Provider implements Runnable {
 			
 			int ran = (int)(Math.random()*100)+1;
 			
+			// ( new Random().nextInt(100)+1 );
+		
+			
 			
 			try {
 				data.setValue(ran);
